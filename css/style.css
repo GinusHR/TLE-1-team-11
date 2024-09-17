@@ -35,3 +35,7 @@ header {
 .headerRightText{
     margin: 0;
 }
+
+.buttonlink {
+    color: black;
+}

@@ -29,10 +29,10 @@ mysqli_close($db);
 
     <div class="headerRight">
         <div class="headerRightPart">
-            <a class="headerRightText" href="signup.html">Sign In</a>
+            <a class="headerRightText" href="html/signup.html">Sign In</a>
         </div>
         <div class="headerRightPart">
-            <a class="headerRightText" href="login.html">Log In</a>
+            <a class="headerRightText" href="html/login.html">Log In</a>
         </div>
 
     </div>
@@ -51,6 +51,8 @@ mysqli_close($db);
                     <div> <?= htmlentities($onderdeel['name']) ?></div>
                     <div> <?= htmlentities($onderdeel['price']) ?></div>
                     <div> <?= htmlentities($onderdeel['description']) ?></div>
+                    <button><a class="buttonlink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a></button>
+
                 <?php } ?>
             </div>
         </div>

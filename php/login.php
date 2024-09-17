@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Welcome back, $name!";
     } else {
         echo "Invalid email or password.";
-        echo '<br><a href="/login.html">Try again</a>';
+        echo '<br><a href="/html/login.html">Try again</a>';
     }
 
     $stmt->close();
