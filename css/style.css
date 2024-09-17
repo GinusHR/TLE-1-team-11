@@ -50,6 +50,10 @@ header {
 }
 
 .mainTitle{
-    font-size: 10rem;
-    font-weight: 300;
+    font-size: 17rem;
+    margin-top: 10vh;
+    margin-bottom: 0;
+}
+.mainSubtitle{
+    font-size: 	2rem;
 }
