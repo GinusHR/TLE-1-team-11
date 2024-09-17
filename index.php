@@ -18,16 +18,23 @@ mysqli_close($db);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    <link rel="stylesheet" href="/css/style.css">-->
+    <link rel="stylesheet" href="./css/style.css">
     <title>TLE</title>
 </head>
 <body>
 <header>
-    <div><p>CyberNoir</p></div>
+    <div class="headerLeft">
+        <p class="headerLeftText">CyberNoir</p>
+    </div>
 
-    <div class="in">
-        <a href="signup.html">Sign In</a>
-        <a href="login.html">Log In</a>
+    <div class="headerRight">
+        <div class="headerRightPart">
+            <a class="headerRightText" href="signup.html">Sign In</a>
+        </div>
+        <div class="headerRightPart">
+            <a class="headerRightText" href="login.html">Log In</a>
+        </div>
+
     </div>
 </header>
 <main>
@@ -50,7 +57,7 @@ mysqli_close($db);
     </section>
 </main>
 <footer>
-<!--    Gemaakt door  Jonah Beijer, Joey Staneken, Miso Sahan, Maha Khirullah en Ginus van der Zee-->
+    <p>E</p>
 </footer>
 
 
