@@ -49,7 +49,7 @@ mysqli_close($db);
                     <div><?= $index + 1 ?></div>
                     <div class="image"> <img   src="images/<?= htmlentities($onderdeel['images'])?>" alt="foto"> </div>
                     <div> <?= htmlentities($onderdeel['name']) ?></div>
-                    <div> <?= htmlentities($onderdeel['price']) ?></div>
+                    <div> ₿ <?= htmlentities($onderdeel['price']) ?></div>
                     <div> <?= htmlentities($onderdeel['description']) ?></div>
                     <button><a class="buttonlink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a></button>
 
