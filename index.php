@@ -38,9 +38,13 @@ mysqli_close($db);
     </div>
 </header>
 <main>
-    <section>
-         <h1>CyberNoir</h1>
-        <h2> KOOP CYBERPARTS!!!!!!!!!</h2>
+    <section class="mainText">
+        <div>
+            <h1 class="mainTitle">CyberNoir</h1>
+        </div>
+        <div>
+            <h2 class="mainSubtitle"> All your boinic parts at nightmaringishly low prices</h2>
+        </div>
     </section>
     <section>
         <div class="items">

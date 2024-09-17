@@ -39,3 +39,17 @@ header {
 .buttonlink {
     color: black;
 }
+
+.mainText {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mainTitle{
+    font-size: 10rem;
+    font-weight: 300;
+}
