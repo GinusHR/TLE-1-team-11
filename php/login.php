@@ -5,7 +5,7 @@
 $servername = "localhost";
 $username = "root";
 $password = ""; 
-$dbname = "user_accounts"; 
+$dbname = "tle_1";
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Welcome back, $name!";
     } else {
         echo "Invalid email or password.";
-        echo '<br><a href="login.html">Try again</a>';
+        echo '<br><a href="/login.html">Try again</a>';
     }
 
     $stmt->close();

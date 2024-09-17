@@ -5,7 +5,7 @@
 $servername = "localhost";
 $username = "root";
 $password = ""; // Use the password you set for MySQL, or leave blank if no password is set
-$dbname = "user_accounts"; // The database you created
+$dbname = "tle_1"; // The database you created
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->execute()) {
         echo "Account created successfully!";
-        echo '<br><a href="login.html">Log in</a>';
+        echo '<br><a href="/login.html">Log in</a>';
     } else {
         echo "Error: " . $stmt->error;
     }
