@@ -1,7 +1,7 @@
 <?php
 /** @var mysqli $db*/
 
-require_once 'database.php';
+require_once 'php/database.php';
 
 $query = "SELECT * FROM onderdelen";
 $result = mysqli_query($db, $query) or die('Error'.mysqli_error($db).'with query'.$query);
@@ -18,7 +18,7 @@ mysqli_close($db);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/style.css">
+<!--    <link rel="stylesheet" href="/css/style.css">-->
     <title>TLE</title>
 </head>
 <body>
@@ -26,8 +26,8 @@ mysqli_close($db);
     <div><p>CyberNoir</p></div>
 
     <div class="in">
-        <a href="signin.php">Sign In</a>
-        <a href="login.php">Log In</a>
+        <a href="php/signin.php">Sign In</a>
+        <a href="php/login.php">Log In</a>
     </div>
 </header>
 <main>
@@ -39,11 +39,11 @@ mysqli_close($db);
         <div class="items">
             <div>
                 <?php foreach ($onderdelen as $index => $onderdeel) { ?>
-
                     <div><?= $index + 1 ?></div>
+                    <div> <img src="images/<?= htmlentities($onderdeel['images'])?>" alt="foto"> </div>
                     <div> <?= htmlentities($onderdeel['name']) ?></div>
                     <div> <?= htmlentities($onderdeel['price']) ?></div>
-                    <div><?= htmlentities($onderdeel['description']) ?></div>
+                    <div> <?= htmlentities($onderdeel['description']) ?></div>
                 <?php } ?>
             </div>
         </div>
