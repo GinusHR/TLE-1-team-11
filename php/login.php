@@ -1,11 +1,11 @@
 <?php
-// signup.php
+// login.php
 
 // Database connection details
 $servername = "localhost";
 $username = "root";
-$password = ""; // Use the password you set for MySQL, or leave blank if no password is set
-$dbname = "user_accounts"; // The database you created
+$password = ""; 
+$dbname = "user_accounts"; 
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,22 +16,21 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $age = $_POST['age'];
     $email = $_POST['email'];
-    $blood_type = $_POST['blood_type'];
-    $notes = $_POST['notes'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Secure the password
+    $password = $_POST['password'];
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO users (name, age, email, blood_type, notes, password) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sissss", $name, $age, $email, $blood_type, $notes, $password);
+    $stmt = $conn->prepare("SELECT name, password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->bind_result($name, $hashed_password);
+    $stmt->fetch();
 
-    if ($stmt->execute()) {
-        echo "Account created successfully!";
-        echo '<br><a href="login.html">Log in</a>';
+    if ($name && password_verify($password, $hashed_password)) {
+        echo "Welcome back, $name!";
     } else {
-        echo "Error: " . $stmt->error;
+        echo "Invalid email or password.";
+        echo '<br><a href="login.html">Try again</a>';
     }
 
     $stmt->close();
