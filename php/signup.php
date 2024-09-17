@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->execute()) {
         echo "Account created successfully!";
-        echo '<br><a href="login.html">Log in</a>';
+        echo '<br><a href="/login.html">Log in</a>';
     } else {
         echo "Error: " . $stmt->error;
     }
