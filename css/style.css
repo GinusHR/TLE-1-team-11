@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+.blueText{
+    color: #00CCFF;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -54,6 +58,20 @@ header {
     margin-top: 10vh;
     margin-bottom: 0;
 }
+
 .mainSubtitle{
     font-size: 	2rem;
+}
+
+.mainButton{
+    align-self: center;
+    width: 20vw;
+    border-style: solid;
+    border-color: #00CCFF;
+    margin-top: 8vh;
+}
+
+.mainButtonText{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }

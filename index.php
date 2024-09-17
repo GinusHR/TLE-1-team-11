@@ -83,7 +83,7 @@ mysqli_close($db);
 
     <div class="headerRight">
         <div class="headerRightPart">
-            <a class="headerRightText" href="html/signup.html">Sign In</a>
+            <a class ="blueText" class="headerRightText" href="html/signup.html">Sign In</a>
         </div>
         <div class="headerRightPart">
             <a class="headerRightText" href="html/login.html">Log In</a>
@@ -99,7 +99,12 @@ mysqli_close($db);
         <div>
             <h2 class="mainSubtitle"> All your boinic parts at nightmaringishly low prices</h2>
         </div>
+        <div class="mainButton">
+            <p class="mainButtonText">Shop now</p>
+        </div>
+
     </section>
+
     <section>
         <div class="items">
             <div>
