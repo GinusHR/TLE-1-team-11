@@ -20,8 +20,62 @@ mysqli_close($db);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <title>TLE</title>
-</head>
+
+    <style>
+        /* Style the navigation bar */
+        nav {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hidden button in the center miso */
+        #hidden-button {
+            width: 100px;
+            height: 40px;
+            background-color: black;
+            border: none;
+            color: #150c0c;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    
+
 <body>
+<nav>
+    <button id="hidden-button">Secret</button>
+</nav>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // the hidden button Miso JS
+        const nav = document.querySelector('nav');
+        const hiddenButton = document.getElementById('hidden-button');
+
+
+        nav.addEventListener('click', (event) => {
+
+            const navRect = nav.getBoundingClientRect();
+            const navCenterX = navRect.width / 2;
+            const clickX = event.clientX - navRect.left;
+
+            const range = 50;
+
+
+            if (clickX >= navCenterX - range && clickX <= navCenterX + range) {
+
+                hiddenButton.style.display = 'block';
+                hiddenButton.style.backgroundColor = 'darkgray';
+            }
+        });
+    });
+</script>
+    
 <header>
     <div class="headerLeft">
         <p class="headerLeftText">CyberNoir</p>
@@ -49,7 +103,7 @@ mysqli_close($db);
                     <div><?= $index + 1 ?></div>
                     <div class="image"> <img   src="images/<?= htmlentities($onderdeel['images'])?>" alt="foto"> </div>
                     <div> <?= htmlentities($onderdeel['name']) ?></div>
-                    <div> ₿ <?= htmlentities($onderdeel['price']) ?></div>
+                    <div> <?= htmlentities($onderdeel['price']) ?></div>
                     <div> <?= htmlentities($onderdeel['description']) ?></div>
                     <button><a class="buttonlink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a></button>
 
