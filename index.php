@@ -26,8 +26,8 @@ mysqli_close($db);
     <div><p>CyberNoir</p></div>
 
     <div class="in">
-        <a href="php/signin.php">Sign In</a>
-        <a href="php/login.php">Log In</a>
+        <a href="signup.html">Sign In</a>
+        <a href="login.html">Log In</a>
     </div>
 </header>
 <main>
