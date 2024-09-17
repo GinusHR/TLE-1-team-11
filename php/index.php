@@ -24,6 +24,7 @@ mysqli_close($db);
 <body>
 <header>
     <div><p>CyberNoir</p></div>
+
     <div class="in">
         <a href="signin.php">Sign In</a>
         <a href="login.php">Log In</a>
@@ -31,7 +32,8 @@ mysqli_close($db);
 </header>
 <main>
     <section>
-        <div> <h1>CyberNoir</h1></div>
+         <h1>CyberNoir</h1>
+        <h2> KOOP CYBERPARTS!!!!!!!!!</h2>
     </section>
     <section>
         <div class="items">
@@ -47,7 +49,9 @@ mysqli_close($db);
         </div>
     </section>
 </main>
-
+<footer>
+<!--    Gemaakt door  Jonah Beijer, Joey Staneken, Miso Sahan, Maha Khirullah en Ginus van der Zee-->
+</footer>
 
 
 
