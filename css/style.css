@@ -15,6 +15,11 @@ a {
     color: #00CCFF;
 }
 
+#hidden-button {
+    margin-top: 1rem;
+    margin-left: 11rem;
+}
+
 header {
     display: flex;
     justify-content: space-between;
