@@ -101,6 +101,8 @@ header {
     margin: 1rem;
 }
 
+
+
 img {
     width: 50%;
 }
@@ -108,9 +110,13 @@ img {
 .buyButton {
     margin-top: 1rem;
     background-color: black;
-    border: 2px white solid;
+    border: 3px solid #00CCFF;
     width: 6rem;
     height: 3rem;
+}
+
+.buyButton:hover {
+    transform: scale(1.2);
 }
 
 .buttonLink {
