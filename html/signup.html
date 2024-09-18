@@ -7,29 +7,47 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<h2>Create an Account</h2>
+<h2 class="signupTitle">Sign up</h2>
 <form action="signup.php" method="post">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required><br><br>
-
-  <label for="age">Age:</label>
-  <input type="number" id="age" name="age" required><br><br>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label for="blood_type">Blood Type:</label>
-  <input type="text" id="blood_type" name="blood_type" required><br><br>
-
-  <label for="notes">Notes:</label><br>
-  <textarea id="notes" name="notes"></textarea><br><br>
-
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required><br><br>
-
-  <button type="submit">Sign Up</button>
+  <div class="formWhole">
+    <div class="formLeft">
+      <div class="inputField">
+        <label for="name">Name:</label>
+        <input placeholder="Insert name" type="text" id="name" name="name" required>
+      </div>
+    
+      <div class="inputField">
+        <label for="age">Age:</label>
+        <input placeholder="Insert age" type="number" id="age" name="age" required>
+      </div>
+    
+      <div class="inputField">
+        <label for="email">E-mail:</label>
+        <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
+      </div>
+    </div>
+    <div class="formRight">
+      <div class="inputField">
+        <label for="blood_type">Blood Type:</label>
+        <input placeholder="Insert blood type" type="text" id="blood_type" name="blood_type" required>
+      </div>
+    
+      <div class="inputField">
+        <label for="notes">Notes:</label>
+        <textarea placeholder="Add notes" id="notes" name="notes"></textarea>
+      </div>
+    
+      <div class="inputField">
+        <label for="password">Password:</label>
+        <input placeholder="Insert password" type="password" id="password" name="password" required>
+      </div>
+    </div>
+  </div>
+  <div class="submitButtonHolder">
+    <button class="submitButton" type="submit">Sign up</button>
+  </div>
 </form>
 
-<p>Already have an account? <a href="login.html">Log in here</a>.</p>
+<p class="submitButtonHolder">Already have an account?  <a href="login.html">Log in here</a>.</p>
 </body>
 </html>
