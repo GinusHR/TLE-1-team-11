@@ -103,9 +103,6 @@ mysqli_close($db);
         <div>
             <h2 class="mainSubtitle"> All your boinic parts at nightmaringishly low prices</h2>
         </div>
-        <div class="mainButton">
-            <p class="mainButtonText">Shop now</p>
-        </div>
 
     </section>
     <div class="invisiDiv"></div>
