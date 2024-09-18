@@ -72,7 +72,7 @@ mysqli_close($db);
                 hiddenButton.style.color = 'white';
                 hiddenButton.style.border = '2px solid #00CCFF'
                 hiddenButton.style.fontWeight = 'heavy'
-                h
+
             }
         });
     });
