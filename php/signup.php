@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("sissss", $name, $age, $email, $blood_type, $notes, $password);
 
     if ($stmt->execute()) {
-        echo "Account created successfully!";
-        echo '<br><a href="/html/login.html">Log in</a>';
+        echo "Account created successfully! ";
+        echo '<br><a href="../html/login.html">Log in</a>';
     } else {
         echo "Error: " . $stmt->error;
     }

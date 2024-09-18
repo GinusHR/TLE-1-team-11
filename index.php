@@ -105,7 +105,9 @@ mysqli_close($db);
         </div>
 
     </section>
-    <div class="invisiDiv"></div>
+    <div class="invisiDiv">
+        <h2>Scroll for parts</h2>
+    </div>
     <section >
         <div class="items">
 

@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->fetch();
 
     if ($name && password_verify($password, $hashed_password)) {
-        echo "Welcome back, $name!";
+        echo "Welcome back, $name! ";
+        echo 'Back to <a href="../index.php">Home</a>';
     } else {
         echo "Invalid email or password.";
         echo '<br><a href="/html/login.html">Try again</a>';

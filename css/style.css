@@ -69,21 +69,26 @@ header {
 }
 
 .invisiDiv {
-    margin-bottom: 10rem;
-    margin-top:10rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13rem;
+    margin-top: 5rem ;
 }
 
 .items {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+
 }
 
 .item {
     width: 40vw;
+    height: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,6 +102,7 @@ header {
 
 img {
     width: 50%;
+    height: 80%;
 }
 
 .buyButton {
