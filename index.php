@@ -68,7 +68,11 @@ mysqli_close($db);
             if (clickX >= navCenterX - range && clickX <= navCenterX + range) {
 
                 hiddenButton.style.display = 'block';
-                hiddenButton.style.backgroundColor = 'darkgray';
+                hiddenButton.style.backgroundColor = 'black';
+                hiddenButton.style.color = 'white';
+                hiddenButton.style.border = '2px solid #00CCFF'
+                hiddenButton.style.fontWeight = 'heavy'
+                h
             }
         });
     });
