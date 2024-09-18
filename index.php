@@ -83,7 +83,7 @@ mysqli_close($db);
 
     <div class="headerRight">
         <div class="headerRightPart">
-            <a class ="blueText" class="headerRightText" href="html/signup.html">Sign In</a>
+            <a class ="blueText" class="headerRightText" href="html/signup.html">Sign Up</a>
         </div>
         <div class="headerRightPart">
             <a class="headerRightText" href="html/login.html">Log In</a>
