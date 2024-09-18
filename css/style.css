@@ -63,19 +63,6 @@ header {
     font-size: 	2rem;
 }
 
-.mainButton{
-    align-self: center;
-    width: 20vw;
-    border-style: solid;
-    border-color: #00CCFF;
-    margin-top: 8vh;
-}
-
-.mainButtonText{
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-
 .invisiDiv {
     margin-bottom: 10rem;
     margin-top:10rem ;
