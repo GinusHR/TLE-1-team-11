@@ -104,25 +104,31 @@ mysqli_close($db);
         </div>
 
     </section>
-
-    <section>
+    <div class="invisiDiv"></div>
+    <section >
         <div class="items">
-            <div>
-                <?php foreach ($onderdelen as $index => $onderdeel) { ?>
-                    <div><?= $index + 1 ?></div>
-                    <div class="image"> <img   src="images/<?= htmlentities($onderdeel['images'])?>" alt="foto"> </div>
-                    <div> <?= htmlentities($onderdeel['name']) ?></div>
-                    <div> ₿ <?= htmlentities($onderdeel['price']) ?></div>
-                    <div> <?= htmlentities($onderdeel['description']) ?></div>
-                    <button><a class="buttonlink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a></button>
 
-                <?php } ?>
+                <?php foreach ($onderdelen as $index => $onderdeel) { ?>
+                    <div class="item">
+<!--                    <div>--><?php //= $index + 1 ?><!--</div>-->
+                    <img class="image"  src="images/<?= htmlentities($onderdeel['images'])?>" alt="foto">
+                    <div> <?= htmlentities($onderdeel['name']) ?></div>
+                    <div> ₿ <?= htmlentities($onderdeel['price']) ?> BTC</div>
+                    <div> <?= htmlentities($onderdeel['description']) ?></div>
+                    <button class="buyButton"><a class="buttonLink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a></button>
             </div>
+                <?php } ?>
+
         </div>
     </section>
 </main>
 <footer>
-    <p>E</p>
+    <p class="footerP">
+        "Amidst the <p class="viP"> navigation</p> <p class="footerP">, calm and still,
+        Lies a secret at the </p> <p class="viP"> center</p><p class="footerP">, for those with the will.
+        Seek the heart where paths converge,
+        A single click, and secrets emerge."
+    </p>
 </footer>
 
 
