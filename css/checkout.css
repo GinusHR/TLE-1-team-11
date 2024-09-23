@@ -20,7 +20,20 @@ header {
     justify-content: space-between;
     padding: 0vh 1vw 0vh 2vw;
     border-bottom: 2px solid white;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);
+    animation: whiteGlow 2s infinite ease-in-out;
+}
+
+@keyframes whiteGlow {
+    0%{
+        box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.75);
+    }
+    50% {
+        box-shadow: 0 0 15px 10px rgba(255, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.75);
+    }
+
 }
 
 .headerLeft {
@@ -38,7 +51,7 @@ header {
 
 .headerRightPart {
     border-left: 2px solid white;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);
+
     padding: 2vh 2vw;
 }
 
@@ -100,7 +113,7 @@ footer {
     padding: 1rem;
     background-color: #111;
     border-top: 2px solid white;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);
+    animation: whiteGlow 2s infinite ease-in-out;
 }
 
 .footerP {

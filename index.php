@@ -112,7 +112,7 @@ mysqli_close($db);
 
     </section>
     <div class="invisiDiv">
-        <h2>Scroll for parts</h2>
+        <h2>V</h2>
     </div>
     <section >
         <div class="items">
