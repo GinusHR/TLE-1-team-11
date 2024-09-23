@@ -1,16 +1,26 @@
-document.querySelectorAll('.webcam-container').forEach(container => {
-    const video = container.querySelector('video');
-
-    container.addEventListener('mouseenter', () => {
-        video.play();
-    });
-
-    container.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0; 
-    });
-});
 document.addEventListener('DOMContentLoaded', () => {
+    // Hover effect to play/pause video on hover
+    document.querySelectorAll('.webcam-container').forEach(container => {
+        const video = container.querySelector('video');
+        
+        // Zorg ervoor dat controls worden verwijderd
+        video.removeAttribute('controls'); 
+
+        container.addEventListener('mouseenter', () => {
+            if (video) {
+                video.play();
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            if (video) {
+                video.pause();
+                video.currentTime = 0; // Zet de video terug naar het begin
+            }
+        });
+    });
+
+    // Modal functionality
     const modals = document.querySelectorAll('.webcam');
     const modal = document.getElementById('modal');
     const modalVideo = document.getElementById('modal-video');
@@ -29,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (videoSource) {
                 modalVideo.querySelector('source').setAttribute('src', videoSource);
+                modalVideo.removeAttribute('controls');  // Verwijder controls hier ook
                 modalVideo.setAttribute('loop', 'loop');  // Zorg ervoor dat loop is ingesteld
                 modalVideo.load();
                 modalVideo.play();
@@ -62,18 +73,5 @@ document.addEventListener('DOMContentLoaded', () => {
             modalVideo.pause();
             modalVideo.currentTime = 0;
         }
-    });
-});
-
-document.querySelectorAll('.webcam-container').forEach(container => {
-    const video = container.querySelector('video');
-
-    container.addEventListener('mouseenter', () => {
-        video.play();
-    });
-
-    container.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0; // Zet de video terug naar het begin
     });
 });
