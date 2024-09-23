@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     padding: 0 1vw 0 2vw;
     border-bottom-style: solid;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);
 }
 
 
@@ -45,7 +45,7 @@ header {
 .headerRightPart{
     border-left-style: solid;
     padding: 2vh 2vw 2vh 2vw;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);
 }
 
 .headerRightText{
@@ -154,6 +154,7 @@ img {
 footer {
     display: flex;
     border-top: 2px white solid;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);
     margin-top: 5rem;
     justify-content: center;
     align-content: center;
@@ -204,6 +205,7 @@ input, textarea{
     color: white;
     border-style: solid;
     border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
 }
 
 .submitButtonHolder {
@@ -220,6 +222,11 @@ input, textarea{
     color: white;
     border-style: solid;
     border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+}
+
+.submitButton:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 1);
 }
 
 
