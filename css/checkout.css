@@ -22,6 +22,10 @@ header {
     border-bottom: 2px solid white;
 }
 
+.headerLeft {
+    margin-top: 1rem;
+}
+
 .headerLeftText {
     margin: 0;
     padding: 2vh 0vw;
