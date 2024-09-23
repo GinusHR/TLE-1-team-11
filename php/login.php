@@ -3,6 +3,6 @@
 session_start();
 
 
-header("Location: ../html/hidden.html");
+header("Location: /php/index.php");
 exit();
 ?>
