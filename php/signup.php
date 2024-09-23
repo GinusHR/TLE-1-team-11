@@ -3,6 +3,6 @@
 session_start();
 
 // Redirect to the homepage after signup
-header("Location: ../php/index.php");
+header("Location: ../index.php");
 exit();
 ?>

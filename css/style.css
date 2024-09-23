@@ -95,8 +95,8 @@ header {
 }
 
 .item {
-    width: 35vw;
-    height: 42vw;
+    width: 30vw;
+    height: 35vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
