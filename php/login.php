@@ -3,6 +3,6 @@
 session_start();
 
 
-header("Location: /php/index.php");
+header("Location: ../php/index.php");
 exit();
 ?>
