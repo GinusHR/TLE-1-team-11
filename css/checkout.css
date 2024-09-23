@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0vh 1vw 0vh 2vw;
-    border-bottom: 1px solid #00CCFF;
+    border-bottom: 2px solid white;
 }
 
 .headerLeftText {
@@ -32,7 +32,7 @@ header {
 }
 
 .headerRightPart {
-    border-left: 1px solid #00CCFF;
+    border-left: 2px solid white;
     padding: 2vh 2vw;
 }
 
@@ -93,7 +93,7 @@ footer {
     text-align: center;
     padding: 1rem;
     background-color: #111;
-    border-top: 1px solid #00CCFF;
+    border-top: 2px solid white;
 }
 
 .footerP {

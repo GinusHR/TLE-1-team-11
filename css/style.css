@@ -23,13 +23,18 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 0vh 1vw 0vh 2vw;
+    padding: 0 1vw 0 2vw;
     border-bottom-style: solid;
+}
+
+
+.headerLeft {
+    margin-top: 1rem;
 }
 
 .headerLeftText{
     margin: 0;
-    padding: 2vh 0vw 2vh 0vw;
+    padding: 2vh 0 2vh 0;
 }
 
 .headerRight{

@@ -80,7 +80,7 @@ mysqli_close($db);
     
 <header>
     <div class="headerLeft">
-        <p class="headerLeftText">CyberNoir</p>
+         <a class="headerLeftText" href="index.php">CyberNoir</a>
     </div>
 
     <button id="hidden-button"><a href="./html/hidden.html">Secret</a></button>

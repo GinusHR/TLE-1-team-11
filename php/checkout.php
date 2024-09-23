@@ -34,7 +34,7 @@ mysqli_close($db);
 <body>
 <header>
     <div class="headerLeft">
-        <p class="headerLeftText">CyberNoir</p>
+        <a class="headerLeftText" href="../index.php">CyberNoir</a>
     </div>
 
     <div class="headerRight">
