@@ -42,6 +42,11 @@ mysqli_close($db);
             color: #150c0c;
             display: none;
             cursor: pointer;
+            box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+        }
+
+        #hidden-button:hover {
+            box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
         }
     </style>
     </head>
@@ -72,6 +77,7 @@ mysqli_close($db);
                 hiddenButton.style.color = 'white';
                 hiddenButton.style.border = '2px solid #00CCFF'
                 hiddenButton.style.fontWeight = 'heavy'
+
 
             }
         });
