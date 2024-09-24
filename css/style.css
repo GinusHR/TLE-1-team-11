@@ -442,6 +442,7 @@ video {
 
 .checkoutInformation {
     display: flex;
+    flex-direction: column;
     width: 40vw;
     max-width: 40vw;
     justify-content: center;
@@ -452,4 +453,13 @@ video {
     width: 40vw;
     max-width: 40vw;
     justify-content: center;
+}
+
+.checkoutName{
+    font-size: 6rem;
+    margin-bottom: 0px;
+}
+
+.checkoutPrice{
+    font-size: 3rem;
 }

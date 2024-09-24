@@ -1,6 +1,24 @@
 <?php
 require_once 'database.php';
 
+//get ID
+$id = '';
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+//select query
+$query = "SELECT * FROM onderdelen WHERE id=".$id;
+
+//connect query and database
+$result = mysqli_query($db, $query)
+or die('Error '.mysqli_error($db).' with query '.$query);
+
+//set query to individual item
+$part = mysqli_fetch_assoc($result);
+
+// Verbinding stoppen
+mysqli_close($db);
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +45,18 @@ require_once 'database.php';
         </div>
     </header>
     <main>
+
         <section class="mainCheckout">
             <div class="checkoutInformation">
-                <p>Meep left</p>
+                <div>
+                    <h2 class="checkoutName"><?= $part['name']?></h2>
+                </div>
+                <div>
+                    <p class="checkoutPrice">₿<?= $part['price']?> BTC</p>
+                </div>
+                <div class="checkoutImage">
+                    <img src="<?= $part['images']?>" alt="Image">
+                </div>
             </div>
             <div class="checkoutForm">
                 <p>Meep right</p>
