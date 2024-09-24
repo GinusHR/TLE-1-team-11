@@ -74,4 +74,51 @@ document.addEventListener('DOMContentLoaded', () => {
             modalVideo.currentTime = 0;
         }
     });
-});
+
+    });
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        let paymentForm = document.getElementById('payment-form');
+        
+        // Controleer of het formulier bestaat voordat je een event listener toevoegt
+        if (paymentForm) {
+            paymentForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                let form = event.target;
+    
+                // Maak een FormData object aan voor de formuliergegevens
+                let formData = new FormData(form);
+    
+                // Stuur het formulier via AJAX
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Bij succesvolle betaling wordt de pagina vernieuwd om de blur te verwijderen
+                    window.location.reload(); 
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        }
+        
+        // Controleer of de paywall popup aanwezig is
+        let popup = document.querySelector('.paywall-popup');
+        if (popup) {
+            console.log("Popup is aanwezig en zou zichtbaar moeten zijn.");
+        } else {
+            console.log("Popup is niet aanwezig.");
+        }
+    }); 
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("Document is fully loaded");
+        let popup = document.querySelector('.paywall-popup');
+        if (popup) {
+            console.log("Popup is present and should be visible.");
+        } else {
+            console.log("Popup is not present.");
+        }
+    });
