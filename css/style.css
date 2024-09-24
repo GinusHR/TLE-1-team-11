@@ -450,14 +450,17 @@ video {
 
 .checkoutForm {
     display: flex;
+    flex-direction: column;
     width: 40vw;
     max-width: 40vw;
-    justify-content: center;
+    margin-top: 10vh;
+    margin-right: 10vw;
 }
 
 .checkoutName{
     font-size: 6rem;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .checkoutPrice{
@@ -493,4 +496,14 @@ video {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 998;
     display: block; /* Ensure it displays */
+}
+
+.purchaseButtonHolder{
+    margin-top: 3vh;
+    align-self: center;
+}
+
+.checkoutMain {
+    display: flex;
+    gap: 5vw;
 }
