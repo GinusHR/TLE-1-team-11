@@ -434,3 +434,22 @@ video {
     width: 100%;
     height: auto;
 }
+
+.mainCheckout {
+    display: flex;
+    justify-content: center;
+}
+
+.checkoutInformation {
+    display: flex;
+    width: 40vw;
+    max-width: 40vw;
+    justify-content: center;
+}
+
+.checkoutForm {
+    display: flex;
+    width: 40vw;
+    max-width: 40vw;
+    justify-content: center;
+}
