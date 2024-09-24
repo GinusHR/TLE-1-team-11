@@ -89,7 +89,7 @@ mysqli_close($db);
          <a class="headerLeftText" href="index.php">CyberNoir</a>
     </div>
 
-    <button id="hidden-button"><a href="./html/hidden.html">Secret</a></button>
+    <button id="hidden-button"><a href="./php/hidden.php">Secret</a></button>
 
     <div class="headerRight">
         <div class="headerRightPart">
