@@ -58,8 +58,38 @@ mysqli_close($db);
                     <img src="<?= $part['images']?>" alt="Image">
                 </div>
             </div>
-            <div class="checkoutForm">
-                <p>Meep right</p>
+            <div>
+                <form class="checkoutForm" action="../php/signup.php" method="post">
+                    <div class="checkoutMain">
+                        <div class="checkoutLeft">
+                            <div class="inputField">
+                                <label for="name">Name:</label>
+                                <input placeholder="Insert name" type="text" id="name" name="name" required>
+                            </div>
+                            <div class="inputField">
+                                <label for="email">E-mail:</label>
+                                <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
+                            </div>
+                            <div class="inputField">
+                                <label for="password">Password:</label>
+                                <input placeholder="Insert password" type="text" id="password" name="password" required>
+                            </div>
+                        </div>
+                        <div class="checkoutRight">
+                            <div class="inputField">
+                                <label for="address">Address:</label>
+                                <input placeholder="Insert address" type="text" id="address" name="address" required>
+                            </div>
+                            <div class="inputField">
+                                <label for="zipcode">Zipcode:</label>
+                                <input placeholder="Insert zipcode" type="text" id="zipcode" name="zipcode" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="purchaseButtonHolder">
+                        <button class="submitButton" type="submit">Sign up</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
