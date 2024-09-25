@@ -90,6 +90,7 @@ mysqli_close($db);
     </div>
 
     <button id="hidden-button"><a href="./php/hidden.php">Secret</a></button>
+    <button id="hidden-button"><a href="./php/hidden.php">Secret</a></button>
 
     <div class="headerRight">
         <div class="headerRightPart">
@@ -114,8 +115,9 @@ mysqli_close($db);
     <div class="invisiDiv">
         <h2>Scroll for parts</h2>
     </div>
-    <section>
-    <div class="items">
+    
+    <section >
+        <div class="items">
 
         <?php foreach ($onderdelen as $index => $onderdeel) { ?>
             <div class="item">
