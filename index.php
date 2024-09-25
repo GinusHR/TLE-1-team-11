@@ -1,14 +1,10 @@
 <?php
-session_start(); // Start the session for authentication
-
 /** @var mysqli $db*/
+
 require_once 'php/database.php';
 
-// Check if the user is logged in
-$loggedIn = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true;
-
 $query = "SELECT * FROM onderdelen";
-$result = mysqli_query($db, $query) or die('Error'.mysqli_error($db).' with query '.$query);
+$result = mysqli_query($db, $query) or die('Error'.mysqli_error($db).'with query'.$query);
 $onderdelen = [];
 while($onderdeel = mysqli_fetch_assoc($result)) {
     $onderdelen[] = $onderdeel;
@@ -53,8 +49,8 @@ mysqli_close($db);
             box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
         }
     </style>
-</head>
-
+    </head>
+    
 
 <body>
 
@@ -64,6 +60,7 @@ mysqli_close($db);
         const nav = document.querySelector('header');
         const hiddenButton = document.getElementById('hidden-button');
 
+
         nav.addEventListener('click', (event) => {
 
             const navRect = nav.getBoundingClientRect();
@@ -72,26 +69,27 @@ mysqli_close($db);
 
             const range = 50;
 
+
             if (clickX >= navCenterX - range && clickX <= navCenterX + range) {
+
                 hiddenButton.style.display = 'block';
                 hiddenButton.style.backgroundColor = 'black';
                 hiddenButton.style.color = 'white';
-                hiddenButton.style.border = '2px solid #00CCFF';
-                hiddenButton.style.fontWeight = 'heavy';
+                hiddenButton.style.border = '2px solid #00CCFF'
+                hiddenButton.style.fontWeight = 'heavy'
+
+
             }
         });
     });
 </script>
-
+    
 <header>
     <div class="headerLeft">
-        <a class="headerLeftText" href="index.php">CyberNoir</a>
+         <a class="headerLeftText" href="index.php">CyberNoir</a>
     </div>
 
-    <!-- Only display hidden button if user is logged in -->
-    <?php if ($loggedIn): ?>
-        <button id="hidden-button"><a href="./html/hidden.html">Secret</a></button>
-    <?php endif; ?>
+    <button id="hidden-button"><a href="./php/hidden.php">Secret</a></button>
 
     <div class="headerRight">
         <div class="headerRightPart">
@@ -109,12 +107,12 @@ mysqli_close($db);
             <h1 class="mainTitle">CyberNoir</h1>
         </div>
         <div>
-            <h2 class="mainSubtitle"> All your bionic parts at nightmarishly low prices</h2>
+            <h2 class="mainSubtitle"> All your boinic parts at nightmaringishly low prices</h2>
         </div>
 
     </section>
     <div class="invisiDiv">
-        <h2>V</h2>
+        <h2>Scroll for parts</h2>
     </div>
     <section>
     <div class="items">
