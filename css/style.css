@@ -1,109 +1,121 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: black;
-    font-size: 2rem;
-    margin: 0;
-  }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background-color: black;
+        font-size: 2rem;
+        margin: 0;
+    }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
-.blueText{
-    color: #00CCFF;
-}
-
-#hidden-button {
-    margin-top: 1rem;
-    margin-left: 11rem;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1vw 0 2vw;
-    border-bottom-style: solid;
+    @font-face {
+        font-family: ROGFont;
+        src: url(../fonts/ROGLyonsTypeRegular3.ttf);
+    }
     
-    animation: whiteGlow 2s infinite ease-in-out;
-}
-
-@keyframes whiteGlow {
-    0%{
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
-    }
-    50% {
-        box-shadow: 0 0 15px 6px rgba(255, 255, 255, 1);
-    }
-    100% {
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+    h1, header, .mainSubtitle, .checkoutName, .signupTitle {
+        font-family: ROGFont;
     }
 
-}
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .blueText{
+        color: #00CCFF;
+    }
+
+    #hidden-button {
+        margin-top: 1rem;
+        margin-left: 11rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1vw 0 2vw;
+        border-bottom-style: solid;
+        /*box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);*/
+        animation: whiteGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes whiteGlow {
+        0%{
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+        }
+        50% {
+            box-shadow: 0 0 15px 6px rgba(255, 255, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+        }
+
+    }
 
 
-.headerLeft {
-    margin-top: 1rem;
-}
+    .headerLeft {
+        margin-top: 1rem;
+    }
 
-.headerLeftText{
-    margin: 0;
-    padding: 2vh 0 2vh 0;
-}
+    .headerLeftText{
+        margin: 0;
+        padding: 2vh 0 2vh 0;
+    }
 
-.headerRight{
-    display: flex;
-}
+    .headerRight{
+        display: flex;
+    }
 
-.headerRightPart{
-    border-left-style: solid;
-    padding: 2vh 2vw 2vh 2vw;
+    .headerRightPart{
+        border-left-style: solid;
+        padding: 2vh 2vw 2vh 2vw;
 
-}
+    }
 
-.headerRightText{
-    margin: 0;
-}
+    .headerRightText{
+        margin: 0;
+    }
 
-.buttonlink {
-    color: black;
-}
+    .buttonlink {
+        color: black;
+    }
 
-.mainText {
-    display: flex;
-    flex-direction: column;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+    .mainText {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
-.mainTitle{
-    font-size: 17rem;
-    margin-top: 10vh;
-    margin-bottom: 0;
-}
+    .mainTitle{
+        font-size: 15rem;
+        margin-top: 10vh;
+        margin-bottom: 0;
+    }
 
-.mainSubtitle{
-    font-size: 	2rem;
-}
+    .mainSubtitle{
+        font-size: 	2rem;
+    }
 
-.invisiDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 13rem;
-    margin-top: 5rem ;
-}
+    .invisiDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 13rem;
+        margin-top: 5rem ;
+    }
 
-.items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem; 
-    justify-content: center;
-    max-width: 100vw;
-}
+    .items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        /*width: 50vw;*/
+
+    }
 
 .item {
     flex: 1  15%;
@@ -124,29 +136,28 @@ header {
     height: 20vh; 
 }
 
-.item:hover {
-    animation: glow 2s infinite ease-in-out;
-    box-shadow: 0 0 0 0 transparent;
-}
-
-
-@keyframes glow {
-    0%{
-        box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
-    }
-    50% {
-        box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
-    }
-    100% {
-        box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+    .item:hover {
+        animation: glow 2s infinite ease-in-out;
+        box-shadow: 0 0 0 0 transparent;
     }
 
-}
+    @keyframes glow {
+        0%{
+            box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+        }
+        50% {
+            box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+        }
 
-img {
-    width: 50%;
-    height: 80%;
-}
+    }
+
+    img {
+        width: 50%;
+        height: 80%;
+    }
 
 .buyButton {
     margin-top: 1rem;
@@ -158,163 +169,169 @@ img {
     color: white;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
-    50% {
-        transform: scale(1.2);
+
+    .buyButton:hover {
+        /*transform: scale(1.3);*/
+        animation: pulse 1s infinite ease-in-out;
+
+
+
     }
-    100% {
-        transform: scale(1);
+
+
+
+    .buttonLink {
+        font-size: 24px;
     }
-}
 
-.buyButton:hover {
-    /*transform: scale(1.3);*/
-    animation: pulse 1s infinite ease-in-out;
+    footer {
+        display: flex;
+        border-top: 2px white solid;
+        animation: whiteGlow 2s infinite ease-in-out;
+        margin-top: 5rem;
+        justify-content: center;
+        align-content: center;
+        position: sticky;
 
+    }
 
+    .footerP {
+        color: #454545;
+        font-size: 20px;
+    }
 
-}
+    .footerPVisible {
+        color: white;
+        font-size: 20px;
+    }
 
-
-
-.buttonLink {
-    font-size: 24px;
-}
-
-footer {
-    display: flex;
-    border-top: 2px white solid;
-    animation: whiteGlow 2s infinite ease-in-out;
-    margin-top: 5rem;
-    justify-content: center;
-    align-content: center;
-    position: sticky;
-
-}
-
-.footerP {
-    color: #454545;
-    font-size: 20px;
-}
-
-.viP {
-    color: #6a6a6a;
-    font-size: 20px;
-    margin-left: 8px;
-}
+    .viP {
+        color: #6a6a6a;
+        font-size: 20px;
+        margin-left: 8px;
+    }
 
 
-.signupTitle{
-    font-size: 5rem;
-    text-align: center;
-}
+    .signupTitle{
+        font-size: 5rem;
+        text-align: center;
+    }
 
-.formWhole{
-    display: flex;
-    justify-content: center;
-    gap: 10vw;
-}
+    .formWhole{
+        display: flex;
+        justify-content: center;
+        gap: 10vw;
+    }
 
-.loginWhole{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5vh;
-}
+    .loginWhole{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
 
-.inputField {
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-}
+    .inputField {
+        display: flex;
+        flex-direction: column;
+        height: 15vh;
+    }
 
-input, textarea{
-    padding-left: 1vw;
-    margin-top: 1vh;
-    height: 5vh;
-    width: 20vw;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-}
+    input, textarea{
+        padding-left: 1vw;
+        margin-top: 1vh;
+        height: 5vh;
+        width: 20vw;
+        background-color: black;
+        color: white;
+        border-style: solid;
+        border-color: #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    }
 
-.submitButtonHolder {
-    margin-top: 6vh;
-    display: flex;
-    justify-content: center;
-}
+    .submitButtonHolder {
+        margin-top: 6vh;
+        display: flex;
+        justify-content: center;
+    }
 
-.submitButton {
-    font-size: 2rem;
-    height: 8vh;
-    width: 20vw;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-}
+    .submitButton {
+        font-size: 2rem;
+        height: 8vh;
+        width: 20vw;
+        background-color: black;
+        color: white;
+        border-style: solid;
+        border-color: #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    }
 
-.submitButton:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 1);
-}
+    .submitButton:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 1);
+        cursor:pointer;
+    }
 
 
-.webcam-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    .webcam-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-.webcam-container {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+    .webcam-container {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
-.webcam {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    .webcam {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
 
-.webcam video {
-    width: 100%; 
-    height: auto; 
-    pointer-events: none;
-}
+    .webcam video {
+        width: 100%; 
+        height: auto; 
+        pointer-events: none;
+    }
 
 
 
 
-.webcam-container {
-    position: relative;
-    overflow: hidden;
-}
+    .webcam-container {
+        position: relative;
+        overflow: hidden;
+    }
 
-.webcam-container video {
-   
-    pointer-events: none;
-    width: 100%;
-    height: auto; 
-}
+    .webcam-container video {
+    
+        pointer-events: none;
+        width: 100%;
+        height: auto; 
+    }
 
-.webcam-container:hover video {
-    opacity: 1; 
-}
+    .webcam-container:hover video {
+        opacity: 1; 
+    }
 
 .modal {
     display: none; 
@@ -328,37 +345,49 @@ input, textarea{
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.8); }
 
-.modal-content {
-    background-color: black;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; 
-}
+    .modal-content {
+        background-color: black;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 2px solid #00CCFF;
+        width: 50%; /* Could be more or less, depending on screen size */
+    }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+    .modal-content-checkout {
+        background-color: black;
+        margin: 5% auto;
+        padding: 20px;
+        border: 2px solid #00CCFF;
+        width: 50%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
 video {
     width: 100%; 
     height: auto; }
 
-.modal-text {
-    margin-top: 15px;
-    font-size: 16px;
-    color: white;
-}
+    .modal-text {
+        margin-top: 15px;
+        font-size: 16px;
+        color: white;
+    }
 
 #modal-video {
     pointer-events: none; 
@@ -371,10 +400,10 @@ video.ready {
     display: block; 
 }
 
-.webcam-container {
-    position: relative;
-    overflow: hidden;
-}
+    .webcam-container {
+        position: relative;
+        overflow: hidden;
+    }
 
 
 
@@ -407,18 +436,18 @@ video.ready {
     animation: none; 
 }
 
-/* Knipperanimatie */
-@keyframes blink {
-    0% {
-        opacity: 1;
+    /* Knipperanimatie */
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 
 .webcam-container:hover .live-indicator {
@@ -438,34 +467,37 @@ video {
     height: auto;
 }
 
-.mainCheckout {
-    display: flex;
-    justify-content: center;
-}
+    .mainCheckout {
+        display: flex;
+        justify-content: center;
+    }
 
-.checkoutInformation {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    max-width: 40vw;
-    justify-content: center;
-}
+    .checkoutInformation {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        max-width: 40vw;
+        justify-content: center;
+    }
 
-.checkoutForm {
-    display: flex;
-    width: 40vw;
-    max-width: 40vw;
-    justify-content: center;
-}
+    .checkoutForm {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        max-width: 40vw;
+        margin-top: 10vh;
+        margin-right: 10vw;
+    }
 
-.checkoutName{
-    font-size: 6rem;
-    margin-bottom: 0px;
-}
+    .checkoutName{
+        font-size: 6rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
 
-.checkoutPrice{
-    font-size: 3rem;
-}
+    .checkoutPrice{
+        font-size: 3rem;
+    }
 
 .blurred {
     filter: blur(8px);
@@ -487,15 +519,15 @@ video {
     display: block; 
 }
 
-.paywall-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 998;
-}
+    .paywall-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+    }
 
 #crypto-wallet {
     margin-bottom: 15px;
@@ -527,4 +559,43 @@ video {
     color: #ffffff; 
     text-align: center; 
     margin-bottom: 1.5rem;
-}
+    }
+
+    .purchaseButtonHolder{
+        margin-top: 3vh;
+        align-self: center;
+    }
+
+    .checkoutMain {
+        display: flex;
+        gap: 5vw;
+    }
+
+    .disclaimerText {
+        color: gray;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .centeredText{
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .centeredDiv{
+        align-self: center;
+    }
+
+    .aSubmitButton {
+        font-size: 2rem;
+        height: 8vh;
+        width: 20vw;
+        color: white;
+        border-style: solid;
+        border-color: #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+        padding: 1vw;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
