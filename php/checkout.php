@@ -87,13 +87,49 @@ mysqli_close($db);
                         </div>
                     </div>
                     <div class="purchaseButtonHolder">
-                        <button class="submitButton" type="submit">Buy now!</button>
+                        <button id="popupBtn" class="submitButton" type="submit">Buy now!</button>
                         <p class="disclaimerText">Subscription required</p>
                     </div>
                 </form>
             </div>
         </section>
     </main>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Subscription required</h2>
+    <p>Get good lol</p>
+  </div>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("popupBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
     <footer>
         <p class="footerP">© 2074 CyberNoir</p>
     </footer>
