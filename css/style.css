@@ -6,6 +6,15 @@ body {
     margin: 0;
   }
 
+@font-face {
+    font-family: ROGFont;
+    src: url(../fonts/ROGLyonsTypeRegular3.ttf);
+ }
+  
+h1, header, .mainSubtitle, .checkoutName, .signupTitle {
+    font-family: ROGFont;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -80,7 +89,7 @@ header {
 }
 
 .mainTitle{
-    font-size: 17rem;
+    font-size: 15rem;
     margin-top: 10vh;
     margin-bottom: 0;
 }
