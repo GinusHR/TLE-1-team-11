@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+// Schakelaar voor paywall (true = paywall aan, false = paywall uit)
+$paywall_enabled = true;
+
 // Controleer of de gebruiker heeft betaald
 $has_paid = isset($_SESSION['has_paid']) ? $_SESSION['has_paid'] : false;
 
@@ -17,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: " . $_SERVER['REQUEST_URI']);
         exit;
     } else {
-        $error_message = "Please enter a valid crypto wallet address and email.";
+        $error_message = "Please enter a valid crypto wallet address.";
     }
 }
 ?>
@@ -32,8 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<div id="page-wrapper" class="<?= !$has_paid ? 'blurred' : '' ?>">
-    <!-- Hier komt alle inhoud van je pagina -->
+<div id="page-wrapper" class="<?= (!$has_paid && $paywall_enabled) ? 'blurred' : '' ?>">
+
+
     <header>
         <div class="headerLeft">
             <a class="headerLeftText" href="../index.php">CyberNoir</a>
@@ -49,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </header>
 
-<div id="main-content" class="<?= !$has_paid ? 'blurred' : '' ?>">
+    <div id="main-content" class="<?= (!$has_paid && $paywall_enabled) ? 'blurred' : '' ?>">
     <div id="hidden-content">
     </div>
     <section class="webcam-grid">
@@ -239,7 +243,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         data-leeftijd="38"
         data-email="WhiteJeremey@hotmail.com" 
         data-bloedgroep="O"
-        data-notities="He tries to lure childeren in" 
+        data-notities="He tries to lures childeren in" 
         data-wachtwoord="AmericaN1!">
         <div class="webcam-container">
             <div class="live-indicator">
@@ -263,21 +267,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </footer>
 </div>
 
-<?php if (!$has_paid): ?>
+<?php if (!$has_paid && $paywall_enabled): ?>
     <div class="paywall-overlay"></div>
     <div class="paywall-popup">
         <h2>Premium Content</h2>
         <p>To access this content, please make a "payment".</p>
         <form id="payment-form" method="POST">
-            
             <input type="text" id="crypto-wallet" name="crypto_wallet" placeholder="Enter crypto wallet address" required>
-            <button type="submit">Pay Now</button>
+            <button class="buyButton" type="submit">Pay Now</button>
+
         </form>
         <?php if (!empty($error_message)): ?>
-            <p style="color:red;"><?= $error_message ?></p>
+            <p><?= $error_message ?></p>
         <?php endif; ?>
     </div>
 <?php endif; ?>
+
 
 
 <script src="../js/main.js" defer></script>
