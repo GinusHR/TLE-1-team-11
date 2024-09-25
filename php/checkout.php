@@ -87,7 +87,8 @@ mysqli_close($db);
                         </div>
                     </div>
                     <div class="purchaseButtonHolder">
-                        <button class="submitButton" type="submit">Sign up</button>
+                        <button class="submitButton" type="submit">Buy now!</button>
+                        <p class="disclaimerText">Subscription required</p>
                     </div>
                 </form>
             </div>

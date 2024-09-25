@@ -507,3 +507,9 @@ video {
     display: flex;
     gap: 5vw;
 }
+
+.disclaimerText {
+    color: gray;
+    text-align: center;
+    font-size: 1.5rem;
+}
