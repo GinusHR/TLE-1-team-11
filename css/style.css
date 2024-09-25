@@ -1,565 +1,565 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: black;
-    font-size: 2rem;
-    margin: 0;
-  }
-
-@font-face {
-    font-family: ROGFont;
-    src: url(../fonts/ROGLyonsTypeRegular3.ttf);
- }
-  
-h1, header, .mainSubtitle, .checkoutName, .signupTitle {
-    font-family: ROGFont;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-.blueText{
-    color: #00CCFF;
-}
-
-#hidden-button {
-    margin-top: 1rem;
-    margin-left: 11rem;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1vw 0 2vw;
-    border-bottom-style: solid;
-    /*box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);*/
-    animation: whiteGlow 2s infinite ease-in-out;
-}
-
-@keyframes whiteGlow {
-    0%{
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
-    }
-    50% {
-        box-shadow: 0 0 15px 6px rgba(255, 255, 255, 1);
-    }
-    100% {
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background-color: black;
+        font-size: 2rem;
+        margin: 0;
     }
 
-}
-
-
-.headerLeft {
-    margin-top: 1rem;
-}
-
-.headerLeftText{
-    margin: 0;
-    padding: 2vh 0 2vh 0;
-}
-
-.headerRight{
-    display: flex;
-}
-
-.headerRightPart{
-    border-left-style: solid;
-    padding: 2vh 2vw 2vh 2vw;
-
-}
-
-.headerRightText{
-    margin: 0;
-}
-
-.buttonlink {
-    color: black;
-}
-
-.mainText {
-    display: flex;
-    flex-direction: column;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.mainTitle{
-    font-size: 15rem;
-    margin-top: 10vh;
-    margin-bottom: 0;
-}
-
-.mainSubtitle{
-    font-size: 	2rem;
-}
-
-.invisiDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 13rem;
-    margin-top: 5rem ;
-}
-
-.items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    /*width: 50vw;*/
-
-}
-
-.item {
-    width: 30vw;
-    height: 35vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:  2px solid #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-    padding: 2rem;
-    margin: 1rem;
-}
-
-.item:hover {
-    animation: glow 2s infinite ease-in-out;
-    box-shadow: 0 0 0 0 transparent;
-}
-
-@keyframes glow {
-    0%{
-        box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+    @font-face {
+        font-family: ROGFont;
+        src: url(../fonts/ROGLyonsTypeRegular3.ttf);
     }
-    50% {
-        box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
-    }
-    100% {
-        box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+    
+    h1, header, .mainSubtitle, .checkoutName, .signupTitle {
+        font-family: ROGFont;
     }
 
-}
-
-img {
-    width: 50%;
-    height: 80%;
-}
-
-.buyButton {
-    margin-top: 1rem;
-    background-color: black;
-    border: 3px solid #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-    width: 6rem;
-    height: 3rem;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+    a {
+        color: white;
+        text-decoration: none;
     }
-    50% {
-        transform: scale(1.2);
+
+    .blueText{
+        color: #00CCFF;
     }
-    100% {
-        transform: scale(1);
+
+    #hidden-button {
+        margin-top: 1rem;
+        margin-left: 11rem;
     }
-}
 
-.buyButton:hover {
-    /*transform: scale(1.3);*/
-    animation: pulse 1s infinite ease-in-out;
-
-
-
-}
-
-
-
-.buttonLink {
-    font-size: 24px;
-}
-
-footer {
-    display: flex;
-    border-top: 2px white solid;
-    animation: whiteGlow 2s infinite ease-in-out;
-    margin-top: 5rem;
-    justify-content: center;
-    align-content: center;
-    position: sticky;
-
-}
-
-.footerP {
-    color: #454545;
-    font-size: 20px;
-}
-
-.footerPVisible {
-    color: white;
-    font-size: 20px;
-}
-
-.viP {
-    color: #6a6a6a;
-    font-size: 20px;
-    margin-left: 8px;
-}
-
-
-.signupTitle{
-    font-size: 5rem;
-    text-align: center;
-}
-
-.formWhole{
-    display: flex;
-    justify-content: center;
-    gap: 10vw;
-}
-
-.loginWhole{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5vh;
-}
-
-.inputField {
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-}
-
-input, textarea{
-    padding-left: 1vw;
-    margin-top: 1vh;
-    height: 5vh;
-    width: 20vw;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-}
-
-.submitButtonHolder {
-    margin-top: 6vh;
-    display: flex;
-    justify-content: center;
-}
-
-.submitButton {
-    font-size: 2rem;
-    height: 8vh;
-    width: 20vw;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-}
-
-.submitButton:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 1);
-    cursor:pointer;
-}
-
-
-.webcam-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.webcam-container {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.webcam {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.webcam video {
-    width: 100%; 
-    height: auto; 
-    pointer-events: none;
-}
-
-
-
-
-.webcam-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.webcam-container video {
-   
-    pointer-events: none;
-    width: 100%;
-    height: auto; 
-}
-
-.webcam-container:hover video {
-    opacity: 1; 
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: black;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 2px solid #00CCFF;
-    width: 50%; /* Could be more or less, depending on screen size */
-}
-
-.modal-content-checkout {
-    background-color: black;
-    margin: 5% auto;
-    padding: 20px;
-    border: 2px solid #00CCFF;
-    width: 50%;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-video {
-    width: 100%; /* Make the video fill the modal */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.modal-text {
-    margin-top: 15px;
-    font-size: 16px;
-    color: white;
-}
-
-#modal-video {
-    pointer-events: none; /* Blokkeer gebruikersinteractie */
-    user-select: none; /* Blokkeer tekstselectie */
-}
-
-
-
-video.ready {
-    display: block; /* Zodra geladen, video tonen */
-}
-
-.webcam-container {
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* Basisstijl voor live-indicator-container */
-.live-indicator {
-    display: flex; /* Flexbox gebruiken om de indicator en tekst naast elkaar te plaatsen */
-    align-items: center; /* Verticaal centreren */
-    position: absolute; /* Absolute positionering binnen de webcam-container */
-    top: 10px; /* Positie vanaf de bovenkant - pas aan naar wens */
-    right: 10px; /* Positie vanaf de rechterkant - pas aan naar wens */
-    opacity: 0; /* Verborgen door transparantie */
-    transition: opacity 0.3s ease; /* Zorg voor een soepele overgang */
-    animation: none; /* Geen animatie als niet gehoverd */
-}
-
-/* Ronde indicator */
-.live-indicator .indicator {
-    width: 20px; /* Pas de breedte aan naar wens */
-    height: 20px; /* Pas de hoogte aan naar wens */
-    background-color: red; /* Kleur van de indicator */
-    border-radius: 50%; /* Maak het een cirkel */
-    margin-right: 8px; /* Ruimte tussen de indicator en de tekst */
-    animation: none; /* Geen animatie als niet gehoverd */
-}
-
-/* Tekst naast de indicator */
-.live-indicator .text {
-    color: white; /* Tekstkleur */
-    font-size: 14px; /* Tekengrootte - pas aan naar wens */
-    font-weight: bold; /* Vetgedrukte tekst */
-    animation: none; /* Geen animatie als niet gehoverd */
-}
-
-/* Knipperanimatie */
-@keyframes blink {
-    0% {
-        opacity: 1;
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1vw 0 2vw;
+        border-bottom-style: solid;
+        /*box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);*/
+        animation: whiteGlow 2s infinite ease-in-out;
     }
-    50% {
-        opacity: 0;
+
+    @keyframes whiteGlow {
+        0%{
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+        }
+        50% {
+            box-shadow: 0 0 15px 6px rgba(255, 255, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+        }
+
     }
-    100% {
-        opacity: 1;
+
+
+    .headerLeft {
+        margin-top: 1rem;
     }
-}
 
-/* Toon live-indicator en laat deze knipperen bij hover op de webcam-container */
-.webcam-container:hover .live-indicator {
-    opacity: 1; /* Maak de indicator zichtbaar */
-    animation: blink 1s infinite; /* Start de knipperanimatie voor de gehele container */
-}
+    .headerLeftText{
+        margin: 0;
+        padding: 2vh 0 2vh 0;
+    }
 
-.webcam-container:hover .live-indicator .indicator,
-.webcam-container:hover .live-indicator .text {
-    animation: blink 1s infinite; /* Start de knipperanimatie voor de indicator en tekst */
-}
+    .headerRight{
+        display: flex;
+    }
+
+    .headerRightPart{
+        border-left-style: solid;
+        padding: 2vh 2vw 2vh 2vw;
+
+    }
+
+    .headerRightText{
+        margin: 0;
+    }
+
+    .buttonlink {
+        color: black;
+    }
+
+    .mainText {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .mainTitle{
+        font-size: 15rem;
+        margin-top: 10vh;
+        margin-bottom: 0;
+    }
+
+    .mainSubtitle{
+        font-size: 	2rem;
+    }
+
+    .invisiDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 13rem;
+        margin-top: 5rem ;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        /*width: 50vw;*/
+
+    }
+
+    .item {
+        width: 30vw;
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:  2px solid #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .item:hover {
+        animation: glow 2s infinite ease-in-out;
+        box-shadow: 0 0 0 0 transparent;
+    }
+
+    @keyframes glow {
+        0%{
+            box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+        }
+        50% {
+            box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+        }
+
+    }
+
+    img {
+        width: 50%;
+        height: 80%;
+    }
+
+    .buyButton {
+        margin-top: 1rem;
+        background-color: black;
+        border: 3px solid #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+        width: 6rem;
+        height: 3rem;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .buyButton:hover {
+        /*transform: scale(1.3);*/
+        animation: pulse 1s infinite ease-in-out;
 
 
-video {
-    display: block; /* Zorg ervoor dat de video zichtbaar is */
-    width: 100%;
-    height: auto;
-}
 
-.mainCheckout {
-    display: flex;
-    justify-content: center;
-}
+    }
 
-.checkoutInformation {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    max-width: 40vw;
-    justify-content: center;
-}
 
-.checkoutForm {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    max-width: 40vw;
-    margin-top: 10vh;
-    margin-right: 10vw;
-}
 
-.checkoutName{
-    font-size: 6rem;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
+    .buttonLink {
+        font-size: 24px;
+    }
 
-.checkoutPrice{
-    font-size: 3rem;
-}
+    footer {
+        display: flex;
+        border-top: 2px white solid;
+        animation: whiteGlow 2s infinite ease-in-out;
+        margin-top: 5rem;
+        justify-content: center;
+        align-content: center;
+        position: sticky;
 
-.blurred {
-    filter: blur(8px);
-    pointer-events: none;
-}
-.paywall-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    width: 300px;
-    text-align: center;
-    color: black;
-    display: block; /* Ensure it displays */
-}
+    }
 
-.paywall-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 998;
-    display: block; /* Ensure it displays */
-}
+    .footerP {
+        color: #454545;
+        font-size: 20px;
+    }
 
-.purchaseButtonHolder{
-    margin-top: 3vh;
-    align-self: center;
-}
+    .footerPVisible {
+        color: white;
+        font-size: 20px;
+    }
 
-.checkoutMain {
-    display: flex;
-    gap: 5vw;
-}
+    .viP {
+        color: #6a6a6a;
+        font-size: 20px;
+        margin-left: 8px;
+    }
 
-.disclaimerText {
-    color: gray;
-    text-align: center;
-    font-size: 1.5rem;
-}
 
-.centeredText{
-    text-align: center;
-    margin-top: 0px;
-}
+    .signupTitle{
+        font-size: 5rem;
+        text-align: center;
+    }
 
-.centeredDiv{
-    align-self: center;
-}
+    .formWhole{
+        display: flex;
+        justify-content: center;
+        gap: 10vw;
+    }
 
-.aSubmitButton {
-    font-size: 2rem;
-    height: 8vh;
-    width: 20vw;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-    padding: 1vw;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .loginWhole{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .inputField {
+        display: flex;
+        flex-direction: column;
+        height: 15vh;
+    }
+
+    input, textarea{
+        padding-left: 1vw;
+        margin-top: 1vh;
+        height: 5vh;
+        width: 20vw;
+        background-color: black;
+        color: white;
+        border-style: solid;
+        border-color: #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    }
+
+    .submitButtonHolder {
+        margin-top: 6vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .submitButton {
+        font-size: 2rem;
+        height: 8vh;
+        width: 20vw;
+        background-color: black;
+        color: white;
+        border-style: solid;
+        border-color: #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    }
+
+    .submitButton:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 1);
+        cursor:pointer;
+    }
+
+
+    .webcam-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .webcam-container {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .webcam {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .webcam video {
+        width: 100%; 
+        height: auto; 
+        pointer-events: none;
+    }
+
+
+
+
+    .webcam-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .webcam-container video {
+    
+        pointer-events: none;
+        width: 100%;
+        height: auto; 
+    }
+
+    .webcam-container:hover video {
+        opacity: 1; 
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    }
+
+    .modal-content {
+        background-color: black;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 2px solid #00CCFF;
+        width: 50%; /* Could be more or less, depending on screen size */
+    }
+
+    .modal-content-checkout {
+        background-color: black;
+        margin: 5% auto;
+        padding: 20px;
+        border: 2px solid #00CCFF;
+        width: 50%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    video {
+        width: 100%; /* Make the video fill the modal */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .modal-text {
+        margin-top: 15px;
+        font-size: 16px;
+        color: white;
+    }
+
+    #modal-video {
+        pointer-events: none; /* Blokkeer gebruikersinteractie */
+        user-select: none; /* Blokkeer tekstselectie */
+    }
+
+
+
+    video.ready {
+        display: block; /* Zodra geladen, video tonen */
+    }
+
+    .webcam-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    /* Basisstijl voor live-indicator-container */
+    .live-indicator {
+        display: flex; /* Flexbox gebruiken om de indicator en tekst naast elkaar te plaatsen */
+        align-items: center; /* Verticaal centreren */
+        position: absolute; /* Absolute positionering binnen de webcam-container */
+        top: 10px; /* Positie vanaf de bovenkant - pas aan naar wens */
+        right: 10px; /* Positie vanaf de rechterkant - pas aan naar wens */
+        opacity: 0; /* Verborgen door transparantie */
+        transition: opacity 0.3s ease; /* Zorg voor een soepele overgang */
+        animation: none; /* Geen animatie als niet gehoverd */
+    }
+
+    /* Ronde indicator */
+    .live-indicator .indicator {
+        width: 20px; /* Pas de breedte aan naar wens */
+        height: 20px; /* Pas de hoogte aan naar wens */
+        background-color: red; /* Kleur van de indicator */
+        border-radius: 50%; /* Maak het een cirkel */
+        margin-right: 8px; /* Ruimte tussen de indicator en de tekst */
+        animation: none; /* Geen animatie als niet gehoverd */
+    }
+
+    /* Tekst naast de indicator */
+    .live-indicator .text {
+        color: white; /* Tekstkleur */
+        font-size: 14px; /* Tekengrootte - pas aan naar wens */
+        font-weight: bold; /* Vetgedrukte tekst */
+        animation: none; /* Geen animatie als niet gehoverd */
+    }
+
+    /* Knipperanimatie */
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Toon live-indicator en laat deze knipperen bij hover op de webcam-container */
+    .webcam-container:hover .live-indicator {
+        opacity: 1; /* Maak de indicator zichtbaar */
+        animation: blink 1s infinite; /* Start de knipperanimatie voor de gehele container */
+    }
+
+    .webcam-container:hover .live-indicator .indicator,
+    .webcam-container:hover .live-indicator .text {
+        animation: blink 1s infinite; /* Start de knipperanimatie voor de indicator en tekst */
+    }
+
+
+    video {
+        display: block; /* Zorg ervoor dat de video zichtbaar is */
+        width: 100%;
+        height: auto;
+    }
+
+    .mainCheckout {
+        display: flex;
+        justify-content: center;
+    }
+
+    .checkoutInformation {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        max-width: 40vw;
+        justify-content: center;
+    }
+
+    .checkoutForm {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        max-width: 40vw;
+        margin-top: 10vh;
+        margin-right: 10vw;
+    }
+
+    .checkoutName{
+        font-size: 6rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .checkoutPrice{
+        font-size: 3rem;
+    }
+
+    .blurred {
+        filter: blur(8px);
+        pointer-events: none;
+    }
+    .paywall-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        width: 300px;
+        text-align: center;
+        color: black;
+        display: block; /* Ensure it displays */
+    }
+
+    .paywall-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        display: block; /* Ensure it displays */
+    }
+
+    .purchaseButtonHolder{
+        margin-top: 3vh;
+        align-self: center;
+    }
+
+    .checkoutMain {
+        display: flex;
+        gap: 5vw;
+    }
+
+    .disclaimerText {
+        color: gray;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .centeredText{
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .centeredDiv{
+        align-self: center;
+    }
+
+    .aSubmitButton {
+        font-size: 2rem;
+        height: 8vh;
+        width: 20vw;
+        color: white;
+        border-style: solid;
+        border-color: #00CCFF;
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+        padding: 1vw;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
