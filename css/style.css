@@ -195,6 +195,11 @@ footer {
     font-size: 20px;
 }
 
+.footerPVisible {
+    color: white;
+    font-size: 20px;
+}
+
 .viP {
     color: #6a6a6a;
     font-size: 20px;
@@ -257,6 +262,7 @@ input, textarea{
 
 .submitButton:hover {
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 1);
+    cursor:pointer;
 }
 
 
@@ -330,6 +336,18 @@ input, textarea{
     padding: 20px;
     border: 2px solid #00CCFF;
     width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content-checkout {
+    background-color: black;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid #00CCFF;
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .close {
@@ -514,3 +532,25 @@ video {
     font-size: 1.5rem;
 }
 
+.centeredText{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.centeredDiv{
+    align-self: center;
+}
+
+.aSubmitButton {
+    font-size: 2rem;
+    height: 8vh;
+    width: 20vw;
+    color: white;
+    border-style: solid;
+    border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    padding: 1vw;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}

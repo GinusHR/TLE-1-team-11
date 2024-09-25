@@ -52,10 +52,10 @@ mysqli_close($db);
                     <h2 class="checkoutName"><?= $part['name']?></h2>
                 </div>
                 <div>
-                    <p class="checkoutPrice">₿<?= $part['price']?> BTC</p>
+                    <h2 class="checkoutPrice">₿<?= $part['price']?> BTC</h2>
                 </div>
                 <div class="checkoutImage">
-                    <img src="<?= $part['images']?>" alt="Image">
+                    <p class="checkoutPrice"><?= $part['description']?></p>
                 </div>
             </div>
             <div>
@@ -96,10 +96,19 @@ mysqli_close($db);
     </main>
 
 <div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Subscription required</h2>
-    <p>Get good lol</p>
+  <div class="modal-content-checkout">
+    <div>
+        <h1 class="centeredText">Subscribe now</h1>
+    </div>
+    <div>
+        <p class="centeredText">This product requires a subscription to work</p>
+    </div>
+    <div class="bottomDiv" >
+        <p class="centeredText">₿0.2 BTC per month</p>
+    </div>
+    <div class="bottomDiv">
+        <a href="../index.php" class="aSubmitButton">Buy now!</a>
+    </div>
   </div>
 </div>
 
@@ -108,30 +117,16 @@ mysqli_close($db);
   var modal = document.getElementById("myModal");
 
   // Get the button that opens the modal
-  var btn = document.getElementById("popupBtn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+  var modalButton = document.getElementById("popupBtn");
 
   // When the user clicks the button, open the modal
-  btn.onclick = function() {
+  modalButton.onclick = function() {
     modal.style.display = "block";
   }
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
 </script>
     <footer>
-        <p class="footerP">© 2074 CyberNoir</p>
+        <p class="footerPVisible">© 2074 CyberNoir</p>
     </footer>
 </body>
 </html>
