@@ -114,21 +114,32 @@ mysqli_close($db);
     <div class="invisiDiv">
         <h2>V</h2>
     </div>
-    <section >
-        <div class="items">
+    <section>
+    <div class="items">
 
-                <?php foreach ($onderdelen as $index => $onderdeel) { ?>
-                    <div class="item">
-<!--                    <div>--><?php //= $index + 1 ?><!--</div>-->
-                    <img class="image"  src="images/<?= htmlentities($onderdeel['images'])?>" alt="foto">
-                    <div> <?= htmlentities($onderdeel['name']) ?></div>
-                    <div> ₿ <?= htmlentities($onderdeel['price']) ?> BTC</div>
-                    <div> <?= htmlentities($onderdeel['description']) ?></div>
-                    <button class="buyButton"><a class="buttonLink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a></button>
+        <?php foreach ($onderdelen as $index => $onderdeel) { ?>
+            <div class="item">
+                <img class="image" src="images/<?= htmlentities($onderdeel['images']) ?>" alt="foto">
+                
+            
+                <div class="product-name"><?= htmlentities($onderdeel['name']) ?></div>
+                
+                
+                <div class="product-price">₿ <?= htmlentities($onderdeel['price']) ?> BTC</div>
+                
+                
+                <div class="product-description"><?= htmlentities($onderdeel['description']) ?></div>
+                
+        
+                <button class="buyButton">
+                    <a class="buttonLink" href="php/checkout.php?id=<?= htmlentities($onderdeel['id']) ?>">Buy</a>
+                </button>
             </div>
-                <?php } ?>
+        <?php } ?>
 
-        </div>
+    </div>
+</section>
+
     </section>
 </main>
 <footer>
