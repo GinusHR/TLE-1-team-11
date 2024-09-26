@@ -24,21 +24,26 @@
 <h2 class="signupTitle">Log In</h2>
 <form action="../php/login.php" method="post">
     <div class="loginWhole">
-        <div>
+        <div class="loginLabel">
             <label for="email">E-mail:</label>
-            <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
-        </div>
-        <div>
             <label for="password">Password:</label>
+        </div>
+
+        <div class="loginInput">
+            <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
             <input placeholder="Insert password" type="password" id="password" name="password" required>
         </div>
+
+
     </div>
     <div class="submitButtonHolder">
         <button class="submitButton" type="submit">Log in</button>
     </div>
 </form>
 
-<p class="submitButtonHolder"> Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+<p class="submitButtonHolder">
+    Don't have an account? <a href="signup.html">Sign up here</a>.
+</p>
 <footer>
     <p class="footerP">© 2074 CyberNoir</p>
 </footer>
