@@ -284,7 +284,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-
 <script src="../js/main.js" defer></script>
 
 </body>
