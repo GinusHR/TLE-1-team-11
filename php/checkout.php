@@ -1,4 +1,5 @@
 <?php
+/** @var mysqli $db*/
 require_once 'database.php';
 
 //get ID
