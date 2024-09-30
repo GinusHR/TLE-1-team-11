@@ -197,7 +197,7 @@ footer {
     display: flex;
     border-top: 2px white solid;
     animation: whiteGlow 2s infinite ease-in-out;
-    margin-top: 5rem;
+    margin-top: 4rem;
     justify-content: center;
     align-content: center;
     position: sticky;
@@ -325,6 +325,15 @@ input, textarea {
     text-align: center;
 }
 
+.webcam2 {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
 .webcam video {
     width: 100%;
     height: auto;
@@ -349,6 +358,19 @@ input, textarea {
 }
 
 .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal2 {
     display: none;
     position: fixed;
     z-index: 1;

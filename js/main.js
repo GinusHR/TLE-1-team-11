@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalVideo = document.getElementById('modal-video');
     const modalText = document.getElementById('modal-text');
     const closeModal = document.querySelector('.close');
+    const modals2 = document.querySelectorAll('.webcam2');
+    const modal2 = document.getElementById('modal2');
+    const modal2Text = document.getElementById('modal2-text');
+    const closeModal2 = document.querySelector('.close');
 
     modals.forEach((webcam) => {
         webcam.addEventListener('click', () => {
@@ -67,11 +71,46 @@ document.addEventListener('DOMContentLoaded', () => {
         modalVideo.currentTime = 0;
     });
 
+    modals2.forEach((webcam2) => {
+        webcam2.addEventListener('click', () => {
+            const naam2 = webcam2.getAttribute('data-naam');
+            const leeftijd2 = webcam2.getAttribute('data-leeftijd');
+            const email2 = webcam2.getAttribute('data-email');
+            const bloedgroep2 = webcam2.getAttribute('data-bloedgroep');
+            const notities2 = webcam2.getAttribute('data-notities');
+            const wachtwoord2 = webcam2.getAttribute('data-wachtwoord');
+
+            const infoList2 = `
+                <ul>
+                    <li><strong>Name:</strong> ${naam2}</li>
+                    <li><strong>Age:</strong> ${leeftijd2}</li>
+                    <li><strong>Email:</strong> ${email2}</li>
+                    <li><strong>Bloodtype:</strong> ${bloedgroep2}</li>
+                    <li><strong>Notes:</strong> ${notities2}</li>
+                    <li><strong>Password:</strong> ${wachtwoord2}</li>
+                </ul>
+            `;
+
+            modal2Text.innerHTML = infoList2;
+            modal2.style.display = 'block';
+        });
+    });
+
+    closeModal2.addEventListener('click', () => {
+        modal2.style.display = 'none';
+    });
+
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';
             modalVideo.pause();
             modalVideo.currentTime = 0;
+        }
+
+        if (event.target === modal2) {
+            modal2.style.display = 'none';
+            // modalVideo.pause();
+            // modalVideo.currentTime = 0;
         }
     });
 
