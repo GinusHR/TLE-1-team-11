@@ -56,10 +56,10 @@ mysqli_close($db);
                     <h2 class="checkoutPrice"><?= $part['description']?></h2>
                 </div>
                 <div>
-                    <p>Insert image here</p>
+                <img class="image" src="../images/<?= $part['images']?>" alt="foto">
                 </div>
                 <div>
-                    <p class="checkoutPrice">₿<?= $part['price']?> BTC</p>
+                    <p class="checkoutPrice"><?= $part['price']?> BTC</p>
                 </div>
             </div>
             <div class="checkoutHolder">
