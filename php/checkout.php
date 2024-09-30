@@ -52,10 +52,10 @@ mysqli_close($db);
                     <h2 class="checkoutName"><?= $part['name']?></h2>
                 </div>
                 <div>
-                    <h2 class="checkoutPrice">₿<?= $part['price']?> BTC</h2>
-                </div>
-                <div class="checkoutImage">
                     <p class="checkoutPrice"><?= $part['description']?></p>
+                </div>
+                <div>
+                    <h2 class="checkoutPrice">₿<?= $part['price']?> BTC</h2>
                 </div>
             </div>
             <div class="checkoutHolder">
