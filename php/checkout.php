@@ -1,4 +1,5 @@
 <?php
+/** @var mysqli $db*/
 require_once 'database.php';
 
 //get ID
@@ -49,13 +50,16 @@ mysqli_close($db);
         <section class="mainCheckout">
             <div class="checkoutInformation">
                 <div>
-                    <h2 class="checkoutName"><?= $part['name']?></h2>
+                    <h1 class="checkoutName"><?= $part['name']?></h1>
                 </div>
                 <div>
-                    <h2 class="checkoutPrice">₿<?= $part['price']?> BTC</h2>
+                    <h2 class="checkoutPrice"><?= $part['description']?></h2>
                 </div>
-                <div class="checkoutImage">
-                    <p class="checkoutPrice"><?= $part['description']?></p>
+                <div>
+                <img class="image" src="../images/<?= $part['images']?>" alt="foto">
+                </div>
+                <div>
+                    <p class="checkoutPrice"><?= $part['price']?> BTC</p>
                 </div>
             </div>
             <div class="checkoutHolder">

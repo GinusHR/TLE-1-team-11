@@ -1,5 +1,16 @@
 <?php
+/** @var mysqli $db*/
 session_start();
+require_once 'database.php';
+
+$query = "SELECT * FROM users";
+$result = mysqli_query($db, $query) or die('Error'.mysqli_error($db).'with query'.$query);
+$users = [];
+while($user = mysqli_fetch_assoc($result)) {
+    $users[] = $user;
+}
+
+
 
 // Schakelaar voor paywall (true = paywall aan, false = paywall uit)
 $paywall_enabled = true;
@@ -22,7 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $error_message = "Please enter a valid crypto wallet address.";
     }
+
+
 }
+mysqli_close($db);
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +87,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 Your browser does not support the video tag.
             </video>
             <div id="modal-text" class="modal-text"></div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal2-text" class="modal-text"></div>
         </div>
     </div>
 
@@ -279,6 +300,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <h3>Jeremy White</h3>
     </div>
+
+      <?php foreach($users as $index => $user) {?>
+          <div class="webcam2"
+               data-naam="<?= htmlentities($user['name']) ?>>"
+               data-leeftijd="<?= htmlentities($user['age']) ?>"
+               data-email="<?= htmlentities($user['email']) ?>"
+               data-bloedgroep="<?= htmlentities($user['blood_type']) ?>"
+               data-notities="<?= htmlentities($user['notes']) ?>"
+               data-wachtwoord="<?= htmlentities($user['password']) ?>">
+
+              <h3><?= htmlentities($user['name']) ?></h3>
+          </div>
+      <?php }?>
     </section>
 
    
