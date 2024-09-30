@@ -490,14 +490,16 @@ video {
 .checkoutInformation {
     display: flex;
     flex-direction: column;
-    width: 40vw;
-    max-width: 40vw;
-    justify-content: center;
+    width: 60vw;
+    max-width: 60vw;
+    margin-top: 20vh;
+    margin-left: 10vw;
 }
 
 .checkoutForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 40vw;
     max-width: 40vw;
     margin-top: 10vh;
@@ -596,7 +598,8 @@ video {
 
 .checkoutMain {
     display: flex;
-    gap: 5vw;
+    flex-direction: column;
+    gap: 2vh;
 }
 
 .disclaimerText {

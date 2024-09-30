@@ -58,32 +58,28 @@ mysqli_close($db);
                     <p class="checkoutPrice"><?= $part['description']?></p>
                 </div>
             </div>
-            <div>
+            <div class="checkoutHolder">
                 <form class="checkoutForm" action="../php/signup.php" method="post">
                     <div class="checkoutMain">
-                        <div class="checkoutLeft">
-                            <div class="inputField">
-                                <label for="name">Name:</label>
-                                <input placeholder="Insert name" type="text" id="name" name="name" required>
-                            </div>
-                            <div class="inputField">
-                                <label for="email">E-mail:</label>
-                                <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
-                            </div>
-                            <div class="inputField">
-                                <label for="password">Password:</label>
-                                <input placeholder="Insert password" type="text" id="password" name="password" required>
-                            </div>
+                        <div class="inputField">
+                            <label for="name">Name:</label>
+                            <input placeholder="Insert name" type="text" id="name" name="name" required>
                         </div>
-                        <div class="checkoutRight">
-                            <div class="inputField">
-                                <label for="address">Address:</label>
-                                <input placeholder="Insert address" type="text" id="address" name="address" required>
-                            </div>
-                            <div class="inputField">
-                                <label for="zipcode">Zipcode:</label>
-                                <input placeholder="Insert zipcode" type="text" id="zipcode" name="zipcode" required>
-                            </div>
+                        <div class="inputField">
+                            <label for="email">E-mail:</label>
+                            <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="inputField">
+                            <label for="password">Password:</label>
+                            <input placeholder="Insert password" type="text" id="password" name="password" required>
+                        </div>
+                        <div class="inputField">
+                            <label for="address">Address:</label>
+                            <input placeholder="Insert address" type="text" id="address" name="address" required>
+                        </div>
+                        <div class="inputField">
+                            <label for="zipcode">Zipcode:</label>
+                            <input placeholder="Insert zipcode" type="text" id="zipcode" name="zipcode" required>
                         </div>
                     </div>
                     <div class="purchaseButtonHolder">
