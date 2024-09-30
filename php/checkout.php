@@ -49,13 +49,16 @@ mysqli_close($db);
         <section class="mainCheckout">
             <div class="checkoutInformation">
                 <div>
-                    <h2 class="checkoutName"><?= $part['name']?></h2>
+                    <h1 class="checkoutName"><?= $part['name']?></h1>
                 </div>
                 <div>
-                    <p class="checkoutPrice"><?= $part['description']?></p>
+                    <h2 class="checkoutPrice"><?= $part['description']?></h2>
                 </div>
                 <div>
-                    <h2 class="checkoutPrice">₿<?= $part['price']?> BTC</h2>
+                    <p>Insert image here</p>
+                </div>
+                <div>
+                    <p class="checkoutPrice">₿<?= $part['price']?> BTC</p>
                 </div>
             </div>
             <div class="checkoutHolder">
