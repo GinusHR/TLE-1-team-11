@@ -160,6 +160,7 @@ img {
 }
 
 .buyButton {
+    font-family: ROGFont;
     margin-top: 1rem;
     background-color: black;
     border: 3px solid #00CCFF;
