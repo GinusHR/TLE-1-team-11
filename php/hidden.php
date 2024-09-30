@@ -64,7 +64,11 @@ mysqli_close($db);
             <div class="headerRightPart">
                 <a href="../html/login.html">Log In</a>
             </div>
+            
+            <div class="headerRightPart">
+                <a  href="../php/usersdata.php">Data</a>
         </div>
+              
     </header>
 
     <div id="main-content" class="<?= (!$has_paid && $paywall_enabled) ? 'blurred' : '' ?>">
@@ -100,7 +104,9 @@ mysqli_close($db);
         data-email="Mirjan35@hotmail.com" 
         data-bloedgroep="A"
         data-notities="Her Mothter is really sick" 
-        data-wachtwoord="skipper1402">
+        data-wachtwoord="skipper1402"
+        data-adres="1137 S 72nd St"
+        data-postcode= "WI 53214">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -120,7 +126,9 @@ mysqli_close($db);
         data-email="Vanhoof@gmail.com" 
         data-bloedgroep="B"
         data-notities="Recently divorced" 
-        data-wachtwoord="password1234">
+        data-wachtwoord="password1234"
+        data-adres="3360 Newland St"
+        data-postcode= "CO 80033">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -140,7 +148,9 @@ mysqli_close($db);
         data-email="Bobsnoek@icloud.com" 
         data-bloedgroep="A"
         data-notities="Always goes 8:30AM running" 
-        data-wachtwoord="Runforest1970">
+        data-wachtwoord="Runforest1970"
+        data-adres="2531 Rice Alley"
+        data-postcode= "CA 95816">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -160,7 +170,9 @@ mysqli_close($db);
         data-email="Jacktheripper@gmail.com" 
         data-bloedgroep="AB"
         data-notities="Killed his little brother" 
-        data-wachtwoord="Arsenal2001">
+        data-wachtwoord="Arsenal2001"
+        data-adres="85 W 300 S St"
+        data-postcode= "UT 84634">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -180,7 +192,9 @@ mysqli_close($db);
         data-email="Selen0208@email.com" 
         data-bloedgroep="A"
         data-notities="Dog got run over" 
-        data-wachtwoord="Doglover0208">
+        data-wachtwoord="Doglover0208"
+        data-adres="2920 15th Ave S"
+        data-postcode= "WA 98144">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -202,7 +216,9 @@ mysqli_close($db);
         data-email="Antonely@gmail.com" 
         data-bloedgroep="O"
         data-notities="Has a drugs addiction" 
-        data-wachtwoord="MDMAyasmin95">
+        data-wachtwoord="MDMAyasmin95"
+        data-adres="7623 NW 4th Ave"
+        data-postcode= "FL 33150">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -223,7 +239,9 @@ mysqli_close($db);
         data-email="Honeybeetaylor@icloud.com" 
         data-bloedgroep="AB"
         data-notities="Her father runaway when she was three years old" 
-        data-wachtwoord="honeybee0906">
+        data-wachtwoord="honeybee0906"
+        data-adres="1036 Quintilian Ave"
+        data-postcode= "FL 32809">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -244,7 +262,9 @@ mysqli_close($db);
         data-email="Williamsnake@hotmail.com" 
         data-bloedgroep="A"
         data-notities="He beat teens for fun" 
-        data-wachtwoord="Viper@1996!">
+        data-wachtwoord="Viper@1996!"
+        data-adres="17 Lake Pl"
+        data-postcode= "CT 06511">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>
@@ -265,7 +285,9 @@ mysqli_close($db);
         data-email="WhiteJeremey@hotmail.com" 
         data-bloedgroep="O"
         data-notities="He tries to lures childeren in" 
-        data-wachtwoord="AmericaN1!">
+        data-wachtwoord="AmericaN1!"
+        data-adres="23 Martens Ave"
+        data-postcode= "NY 11580">
         <div class="webcam-container">
             <div class="live-indicator">
                 <div class="indicator"></div>

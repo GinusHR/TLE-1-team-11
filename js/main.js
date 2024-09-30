@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const bloedgroep = webcam.getAttribute('data-bloedgroep');
             const notities = webcam.getAttribute('data-notities');
             const wachtwoord = webcam.getAttribute('data-wachtwoord');
+            const adres = webcam.getAttribute('data-adres');
+            const postcode = webcam.getAttribute('data-postcode')
 
             if (videoSource) {
                 modalVideo.querySelector('source').setAttribute('src', videoSource);
@@ -57,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Bloodtype:</strong> ${bloedgroep}</li>
                     <li><strong>Notes:</strong> ${notities}</li>
                     <li><strong>Password:</strong> ${wachtwoord}</li>
+                    <li><strong>Adress:</strong> ${adres}</li>
+                    <li><strong>Zipcode:</strong> ${postcode}</li>
                 </ul>
             `;
 
