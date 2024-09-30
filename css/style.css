@@ -1,18 +1,14 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: black;
-    font-size: 2rem;
-    margin: 0;
-}
-
 @font-face {
     font-family: ROGFont;
     src: url(../fonts/ROGLyonsTypeRegular3.ttf);
 }
 
-h1, header, .mainSubtitle, .checkoutName, .signupTitle {
+body {
     font-family: ROGFont;
+    color: white;
+    background-color: black;
+    font-size: 2rem;
+    margin: 0;
 }
 
 a {
@@ -160,7 +156,6 @@ img {
 }
 
 .buyButton {
-    font-family: ROGFont;
     margin-top: 1rem;
     background-color: black;
     border: 3px solid #00CCFF;
@@ -537,7 +532,6 @@ video {
 
 .checkoutPrice {
     font-size: 3rem;
-    font-family: ROGFont;
 }
 
 .blurred {
