@@ -74,21 +74,38 @@ if ($has_paid && $paywall_enabled) {
     <div id="main-content" class="<?= (!$has_paid && $paywall_enabled) ? 'blurred' : '' ?>">
     <div id="hidden-content">
         <?php if ($has_paid && !empty($users)): ?>
-            <?php foreach ($users as $user): ?>
-                <div class="user-info card">
-                   
-                    <ul class="user-details">
-                    <li><strong>Name:</strong> <?= $user['name'] ?></li>
-                    <li><strong>Age:</strong> <?= $user['age'] ?></li>
-                        <li><strong>Email:</strong> <?= $user['email'] ?></li>
-                        <li><strong>Password:</strong> <?= $user['password'] ?></li>
-                        <li><strong>Blood Type:</strong> <?= $user['blood_type'] ?></li>
-                        <li><strong>Address:</strong> <?= $user['address'] ?></li>
-                        <li><strong>Zipcode:</strong> <?= $user['postal_code'] ?></li>
-                        <li><strong>Notes:</strong> <?= $user['notes'] ?></li>
-                    </ul>
-                </div>
-            <?php endforeach; ?>
+            <section id="users-list">
+    <?php foreach ($users as $index => $user) { ?>
+        <div class="webcam2 user-preview"
+             data-index="<?= $index ?>"
+             data-naam="<?= htmlentities($user['name']) ?>"
+             data-leeftijd="<?= htmlentities($user['age']) ?>"
+             data-email="<?= htmlentities($user['email']) ?>"
+             data-bloedgroep="<?= htmlentities($user['blood_type']) ?>"
+             data-notities="<?= htmlentities($user['notes']) ?>"
+             data-wachtwoord="<?= htmlentities($user['password']) ?>"
+             data-adres="<?= htmlentities($user['address']) ?>"
+             data-postcode="<?= htmlentities($user['postal_code']) ?>">
+
+            <h3><?= htmlentities($user['name']) ?></h3>
+        </div>
+    <?php } ?>
+</section>
+
+<div id="user-modal" class="user-info card" style="display: none;">
+        <span class="close-btn">&times;</span>
+        <ul class="user-details">
+            <li><strong>Name:</strong> <span id="modal-name"></span></li>
+            <li><strong>Age:</strong> <span id="modal-age"></span></li>
+            <li><strong>Email:</strong> <span id="modal-email"></span></li>
+            <li><strong>Password:</strong> <span id="modal-password"></span></li>
+            <li><strong>Blood Type:</strong> <span id="modal-blood-type"></span></li>
+            <li><strong>Address:</strong> <span id="modal-address"></span></li>
+            <li><strong>Zipcode:</strong> <span id="modal-zipcode"></span></li>
+            <li><strong>Notes:</strong> <span id="modal-notes"></span></li>
+        </ul>
+</div>
+
         <?php elseif ($has_paid): ?>
             <p class="no-users-message">Er zijn geen gebruikersgegevens beschikbaar.</p>
         <?php endif; ?>
@@ -104,7 +121,7 @@ if ($has_paid && $paywall_enabled) {
 <?php if (!$has_paid && $paywall_enabled): ?>
     <div class="paywall-overlay"></div>
     <div class="paywall-popup">
-        <h2>Premium Content</h2>
+        <h2>Wanna buy users data, no problem!</h2>
         <p>To access this content, please make a "payment".</p>
         <form id="payment-form" method="POST">
             <input type="text" id="crypto-wallet" name="crypto_wallet" placeholder="Enter crypto wallet address" required>

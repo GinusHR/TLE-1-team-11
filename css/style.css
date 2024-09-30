@@ -323,12 +323,16 @@ input, textarea {
 }
 
 .webcam2 {
+    margin-left: 50vh;
+    margin-right: 50vh;
+    margin-top: 15vh;
     border: 1px solid #ddd;
-    border-radius: 5px;
     overflow: hidden;
     background-color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 .webcam video {
@@ -549,7 +553,6 @@ video {
     background-color: black; 
     padding: 20px;
     border: 2px solid #00CCFF; 
-    border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 999;
     width: 50%; 
@@ -583,7 +586,6 @@ video {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
     width: 30vh;
     color: white;
     text-align: center; 
@@ -643,7 +645,6 @@ video {
     color: white;
     border-style: solid;
     border-color: #00CCFF;
-    
     padding: 1vw;
     max-width: fit-content;
     margin-left: auto;
@@ -651,31 +652,22 @@ video {
 }
 
 .user-info.card {
-    border-radius: 12px;
-    padding: 10vh;
-    border: 1px solid #e0e0e0;
     
+    padding: 40vh;
+    border: 1px solid #e0e0e0;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-    margin-left: 30vh;
-    margin-right: 30vh;
+    margin: 5vh auto;
     font-size: 1rem;
+    background: #fff;
+    max-width: 600px;
+    position: relative;
+    z-index: 1000;
 }
 
 .user-info.card:hover {
     transform: translateY(-5px);
-  
 }
 
-
-.user-info h3 {
-    font-size: 1.6em;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-/* Stijl voor details van gebruikersinformatie */
 .user-details {
     list-style: none;
     padding: 0;
@@ -695,19 +687,33 @@ video {
 }
 
 .user-details li span {
-    color: #555;
+    color: white;
     text-align: right;
 }
 
-/* Bericht voor geen gebruikersgegevens */
-.no-users-message {
-    font-style: italic;
-    color: #777;
-    text-align: center;
+#user-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    background-color: black;
     padding: 20px;
-    background-color: #fafafa;
-    border: 1px dashed #ccc;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 20px auto;
+    z-index: 1001;
 }
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#user-modal .user-details li {
+    color: white !important;
+}
+

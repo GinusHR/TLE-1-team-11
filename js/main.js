@@ -165,3 +165,39 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Popup is not present.");
         }
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const userPreviews = document.querySelectorAll('.user-preview');
+        const userModal = document.getElementById('user-modal');
+        const closeModalBtn = document.querySelector('.close-btn');
+    
+        userPreviews.forEach(preview => {
+            preview.addEventListener('click', () => {
+                // Vul de modal met de gegevens van de gebruiker
+                document.getElementById('modal-name').textContent = preview.dataset.naam;
+                document.getElementById('modal-age').textContent = preview.dataset.leeftijd;
+                document.getElementById('modal-email').textContent = preview.dataset.email;
+                document.getElementById('modal-password').textContent = preview.dataset.wachtwoord;
+                document.getElementById('modal-blood-type').textContent = preview.dataset.bloedgroep;
+                document.getElementById('modal-address').textContent = preview.dataset.adres;
+                document.getElementById('modal-zipcode').textContent = preview.dataset.postcode;
+                document.getElementById('modal-notes').textContent = preview.dataset.notities;
+    
+                // Toon de modal
+                userModal.style.display = 'block';
+            });
+        });
+    
+        // Sluit de modal
+        closeModalBtn.addEventListener('click', () => {
+            userModal.style.display = 'none';
+        });
+    
+        // Sluit de modal als er buiten wordt geklikt
+        window.addEventListener('click', (event) => {
+            if (event.target == userModal) {
+                userModal.style.display = 'none';
+            }
+        });
+    });
+    
