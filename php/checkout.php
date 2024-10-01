@@ -87,7 +87,7 @@ mysqli_close($db);
                         </div>
                     </div>
                     <div class="purchaseButtonHolder">
-                        <button id="popupBtn" class="submitButton" type="submit">Buy now!</button>
+                        <a id="popupBtn" class="submitButton">Buy now!</a>
                         <p class="disclaimerText">Subscription required</p>
                     </div>
                 </form>
@@ -106,8 +106,11 @@ mysqli_close($db);
     <div class="bottomDiv" >
         <p class="centeredText">₿0.2 BTC per month</p>
     </div>
-    <div class="bottomDiv">
-        <a href="../index.php" class="aSubmitButton">Buy now!</a>
+    <div class="bottomDiv" >
+        <p class="centeredTextDisclaimer">When you start a subscription, you agree to our Privacy Policy and our Terms of Conditions. If you take on a subscription, you agree to use the product for at least 12 months, if you decide to cancel early, you must pay the remainder of the subscription as a termination fee.</p>
+    </div>
+        <div class="bottomDiv">
+        <a href="../index.php" id="popupBtn" class="submitButton" type="submit">Buy now!</a>
     </div>
   </div>
 </div>

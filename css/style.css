@@ -290,6 +290,7 @@ input, textarea {
     border-style: solid;
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    padding: 1vw;
 }
 
 .submitButton:hover {
@@ -650,6 +651,14 @@ video {
 .centeredText {
     text-align: center;
     margin-top: 0px;
+}
+
+.centeredTextDisclaimer {
+    text-align: center;
+    margin-top: 0px;
+    color: #454545;
+    font-size: 1rem;
+    margin-bottom: 5vh;
 }
 
 .centeredDiv {
