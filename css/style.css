@@ -241,13 +241,12 @@ footer {
     flex-direction: column;
     align-items: flex-start;  
     margin-bottom: 6vh;
-
+    gap: 6vh
 }
 
 .loginInput {
     display: flex;
-    flex-direction: column; 
-    gap: 3vh; 
+    flex-direction: column;  
     align-items: center;
 }
 
