@@ -741,3 +741,9 @@ video {
     color: white !important;
 }
 
+.formLeft , .formRight{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
