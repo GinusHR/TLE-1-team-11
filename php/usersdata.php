@@ -30,7 +30,7 @@ require_once 'database.php';
 
 $users = [];
 if ($has_paid && $paywall_enabled) {
-    $query = "SELECT * FROM users";
+    $query = "SELECT * FROM users2";
     $result = mysqli_query($db, $query);
 
     if ($result && mysqli_num_rows($result) > 0) {
