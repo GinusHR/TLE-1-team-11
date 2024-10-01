@@ -191,13 +191,15 @@ img {
 }
 
 footer {
+    position: sticky;
+    left: 0;
+    width: 100%;
     display: flex;
     border-top: 2px white solid;
     animation: whiteGlow 2s infinite ease-in-out;
     margin-top: 4rem;
     justify-content: center;
     align-content: center;
-    position: sticky;
 
 }
 
@@ -232,6 +234,13 @@ footer {
     display: flex;
     justify-content: center;
     gap: 10vw;
+}
+
+.loginDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .loginWhole {
@@ -737,3 +746,8 @@ video {
     color: white !important;
 }
 
+.error {
+    color: red;
+    display: flex;
+    justify-content: center;
+}
