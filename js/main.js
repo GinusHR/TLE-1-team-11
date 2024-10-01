@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modals2 = document.querySelectorAll('.webcam2');
     const modal2 = document.getElementById('modal2');
     const modal2Text = document.getElementById('modal2-text');
-    const closeModal2 = document.querySelector('.close');
+    const closeModal2 = document.querySelector('.close2');
 
     modals.forEach((webcam) => {
         webcam.addEventListener('click', () => {
