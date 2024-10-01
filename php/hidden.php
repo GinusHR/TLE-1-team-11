@@ -301,18 +301,7 @@ mysqli_close($db);
         <h3>Jeremy White</h3>
     </div>
 
-      <?php foreach($users as $index => $user) {?>
-          <div class="webcam2"
-               data-naam="<?= htmlentities($user['name']) ?>>"
-               data-leeftijd="<?= htmlentities($user['age']) ?>"
-               data-email="<?= htmlentities($user['email']) ?>"
-               data-bloedgroep="<?= htmlentities($user['blood_type']) ?>"
-               data-notities="<?= htmlentities($user['notes']) ?>"
-               data-wachtwoord="<?= htmlentities($user['password']) ?>">
-
-              <h3><?= htmlentities($user['name']) ?></h3>
-          </div>
-      <?php }?>
+      
     </section>
 
    
