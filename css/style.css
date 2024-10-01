@@ -211,10 +211,15 @@ footer {
     font-size: 20px;
 }
 
-.viP {
+.viP1 {
+    color: #454545;
+    font-size: 14px;
+}
+
+.viP2 {
     color: #6a6a6a;
-    font-size: 20px;
-    margin-left: 8px;
+    font-size: 14px;
+    margin-left: 5px;
 }
 
 

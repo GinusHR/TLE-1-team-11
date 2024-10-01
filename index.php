@@ -145,9 +145,9 @@ mysqli_close($db);
     </section>
 </main>
 <footer>
-    <p class="footerP">
-        "Amidst the <p class="viP"> navigation</p> <p class="footerP">, calm and still,
-        Lies a secret at the </p> <p class="viP"> center</p><p class="footerP">, for those with the will.
+    <p class="viP1">
+        "Amidst the <p class="viP2"> navigation</p> <p class="viP1">, calm and still,
+        Lies a secret at the </p> <p class="viP2"> center</p><p class="viP1">, for those with the will.
         Seek the heart where paths converge,
         A single click, and secrets emerge."
     </p>
