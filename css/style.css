@@ -31,18 +31,18 @@ header {
     padding: 0 1vw 0 2vw;
     border-bottom-style: solid;
     /*box-shadow: 0 0 15px 5px rgba(255, 255, 255, 1);*/
-    animation: whiteGlow 2s infinite ease-in-out;
+    animation: whiteGlow 5s infinite ease-in-out;
 }
 
 @keyframes whiteGlow {
     0% {
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+        box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.75);
     }
     50% {
-        box-shadow: 0 0 15px 6px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 15px 8px rgba(255, 255, 255, 0.75);
     }
     100% {
-        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.75);
+        box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.75);
     }
 
 }
@@ -142,13 +142,13 @@ header {
 
 @keyframes glow {
     0% {
-        box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     }
     50% {
-        box-shadow: 0 0 25px 10px rgba(0, 128, 255, 1);
+        box-shadow: 0 0 15px 10px rgba(0, 128, 255, 0.75);
     }
     100% {
-        box-shadow: 0 0 25px 5px rgba(0, 128, 255, 0.75);
+        box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     }
 
 }
@@ -168,25 +168,10 @@ img {
     color: white;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+.buyButton:hover{
+    animation: glow 2s infinite ease-in-out;
+    box-shadow: 0 0 0 0 transparent;
 }
-
-.buyButton:hover {
-    /*transform: scale(1.3);*/
-    animation: pulse 1s infinite ease-in-out;
-
-
-}
-
 
 .buttonLink {
     font-size: 24px;
