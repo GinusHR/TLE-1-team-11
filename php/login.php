@@ -104,11 +104,11 @@ if(!isset($_SESSION['user'])) {
     <div class="loginWhole">
         <div class="loginLabel">
             <label for="email">E-mail:</label>
-            <label for="password">Password:</label>
+            <input placeholder="Insert E-mail" type="email" id="email" name="email" value="<?= htmlentities($email ?? '') ?>"required>
         </div>
 
         <div class="loginInput">
-            <input placeholder="Insert E-mail" type="email" id="email" name="email" value="<?= htmlentities($email ?? '') ?>"required>
+        <label for="password">Password:</label>
             <input placeholder="Insert password" type="password" id="password" name="password" required>
         </div>
     </div>

@@ -233,28 +233,24 @@ footer {
 
 .loginWhole {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    margin-right: 10vw;
+  
 
 }
 
 .loginLabel {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    align-items: end;
-
 }
 
 .loginInput {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+  
 }
-
 
 .inputField {
     display: flex;
@@ -262,7 +258,19 @@ footer {
     height: 15vh;
 }
 
-input, textarea {
+.loginWhole input,
+.loginWhole textarea {
+    height: 5vh;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+}
+
+.formWhole input,
+.formWhole textarea {
     padding-left: 1vw;
     margin-top: 1vh;
     height: 5vh;
@@ -274,6 +282,22 @@ input, textarea {
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
 }
 
+.checkoutMain input,
+.checkoutmain textarea
+{
+    padding-left: 1vw;
+    margin-top: 1vh;
+    height: 5vh;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+}
+
+
+
 .submitButtonHolder {
     margin-top: 6vh;
     margin-bottom: 10vh;
@@ -282,7 +306,7 @@ input, textarea {
 }
 
 .submitButton {
-    font-size: 2rem;
+    font-size: 1.5rem;
     height: 8vh;
     width: 20vw;
     background-color: black;

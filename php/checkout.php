@@ -38,10 +38,10 @@ mysqli_close($db);
 
         <div class="headerRight">
             <div class="headerRightPart">
-                <a class="blueText" class="headerRightText" href="../html/signup.html">Sign Up</a>
+                <a class="blueText" class="headerRightText" href="../php/signup.php">Sign Up</a>
             </div>
             <div class="headerRightPart">
-                <a class="headerRightText" href="../html/login.html">Log In</a>
+                <a class="headerRightText" href="../php/login.php">Log In</a>
             </div>
         </div>
     </header>

@@ -16,10 +16,10 @@
 
     <div class="headerRight">
         <div class="headerRightPart">
-            <a class="blueText" href="../html/signup.html">Sign Up</a>
+            <a class="blueText" href="../php/signup.php">Sign Up</a>
         </div>
         <div class="headerRightPart">
-            <a href="../html/login.html">Log In</a>
+            <a href="../php/login.php">Log In</a>
         </div>
     </div>
 </header>
