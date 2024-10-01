@@ -185,7 +185,8 @@ footer {
     justify-content: center;
     align-content: center;
     position: sticky;
-
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 .footerP {
@@ -600,6 +601,7 @@ video {
 
 .product-name {
     font-size: 1.5rem;
+    text-align: center;
     font-weight: bold;
     color: #00CCFF;
     margin-top: 1rem;
