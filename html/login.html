@@ -22,24 +22,27 @@
     </div>
 </header>
 <h2 class="signupTitle">Log In</h2>
-<form action="../php/login.php" method="post">
-    <div class="loginWhole">
-        <div class="loginLabel">
-            <label for="email">E-mail:</label>
-            <label for="password">Password:</label>
-        </div>
-
-        <div class="loginInput">
-            <input placeholder="Insert E-mail" type="email" id="email" name="email" required>
-            <input placeholder="Insert password" type="password" id="password" name="password" required>
-        </div>
-
-
-    </div>
-    <div class="submitButtonHolder">
-        <button class="submitButton" type="submit">Log in</button>
-    </div>
-</form>
+        <form action="../php/login.php" method="post">
+            <div class="formWhole">
+                <div class="loginWhole">
+                    <div class="loginInput">
+                        <label for="email">E-mail:</label>
+                        <input class="login-input" placeholder="Insert E-mail" type="email" id="email" name="email" required>
+                    </div>
+                        <div class="loginInput">
+                        <label for="password">Password:</label>
+                        <input class="login-input" placeholder="Insert password" type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="submitButtonHolder">
+                    <button class="submitButton" type="submit">Log in</button>
+                </div>
+            </div>
+        </form>
+        
+    
 
 <p class="submitButtonHolder">
     Don't have an account? <a href="signup.html">Sign up here</a>.
