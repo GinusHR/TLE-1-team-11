@@ -231,36 +231,26 @@ footer {
     align-items: center;
 }
 
-.spacingDiv {
-    margin-top: 13vh;
-    padding: 2vh;
-    margin-bottom: 10vh;
-}
-
 .loginWhole {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    margin-right: 10vw;
+
 
 }
 
 .loginLabel {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    align-items: end;
-
 }
 
 .loginInput {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-}
 
+}
 
 .inputField {
     display: flex;
@@ -268,7 +258,19 @@ footer {
     height: 15vh;
 }
 
-input, textarea {
+.loginWhole input,
+.loginWhole textarea {
+    height: 5vh;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+}
+
+.formWhole input,
+.formWhole textarea {
     padding-left: 1vw;
     margin-top: 1vh;
     height: 5vh;
@@ -279,6 +281,23 @@ input, textarea {
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
 }
+
+.checkoutMain input,
+.checkoutmain textarea
+{
+    padding-left: 1vw;
+    margin-top: 1vh;
+    height: 5vh;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+}
+
+
+
 
 .submitButtonHolder {
     margin-top: 6vh;
@@ -296,7 +315,7 @@ input, textarea {
     border-style: solid;
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-    padding: 1vw;
+  
 }
 
 .submitButton:hover {
@@ -620,7 +639,10 @@ video {
     font-size: 16px;
     border: 1px solid #ccc;
     width: 30vh;
-    color: white;
+    background-color: black;
+    border-style: solid;
+    border-color: #00CCFF;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     text-align: center; 
 }
 
