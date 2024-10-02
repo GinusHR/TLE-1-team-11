@@ -1,20 +1,21 @@
 <?php
 session_start();
+require_once 'database.php';
 
 // Schakelaar voor paywall (true = paywall aan, false = paywall uit)
 $paywall_enabled = true;
 
-// Controleer of de gebruiker heeft betaald
-$has_paid = isset($_SESSION['has_paid']) ? $_SESSION['has_paid'] : false;
+// Controleer of de gebruiker heeft betaald voor deze specifieke pagina
+$has_paid = isset($_SESSION['has_paid_userdata']) ? $_SESSION['has_paid_userdata'] : false;
 
 // Na POST-aanvraag verwerken
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $crypto_wallet = $_POST['crypto_wallet'] ?? '';
 
-    // Controleer of zowel een walletadres als een e-mailadres is ingevoerd
+    // Controleer of een walletadres is ingevoerd
     if (!empty($crypto_wallet)) {
-        // Markeer de betaling als voltooid in de sessie
-        $_SESSION['has_paid'] = true;
+        // Markeer de betaling als voltooid voor deze pagina in de sessie
+        $_SESSION['has_paid_userdata'] = true;
 
         // Redirect om formulier opnieuw indienen te voorkomen
         header("Location: " . $_SERVER['REQUEST_URI']);
@@ -24,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-/** @var mysqli $db*/
 
+/** @var mysqli $db*/
 require_once 'database.php';    
 
 $users = [];
@@ -70,48 +71,46 @@ if ($has_paid && $paywall_enabled) {
         </div>
     </header>
 
-
     <div id="main-content" class="<?= (!$has_paid && $paywall_enabled) ? 'blurred' : '' ?>">
-    <div id="hidden-content">
-        <?php if ($has_paid && !empty($users)): ?>
-            <section id="users-list">
-    <?php foreach ($users as $index => $user) { ?>
-        <div class="webcam2 user-preview"
-             data-index="<?= $index ?>"
-             data-naam="<?= htmlentities($user['name']) ?>"
-             data-leeftijd="<?= htmlentities($user['age']) ?>"
-             data-email="<?= htmlentities($user['email']) ?>"
-             data-bloedgroep="<?= htmlentities($user['blood_type']) ?>"
-             data-notities="<?= htmlentities($user['notes']) ?>"
-             data-wachtwoord="<?= htmlentities($user['password']) ?>"
-             data-adres="<?= htmlentities($user['address']) ?>"
-             data-postcode="<?= htmlentities($user['postal_code']) ?>">
+        <div id="hidden-content">
+            <?php if ($has_paid && !empty($users)): ?>
+                <section id="users-list">
+                    <?php foreach ($users as $index => $user): ?>
+                        <div class="webcam2 user-preview"
+                             data-index="<?= $index ?>"
+                             data-naam="<?= htmlentities($user['name']) ?>"
+                             data-leeftijd="<?= htmlentities($user['age']) ?>"
+                             data-email="<?= htmlentities($user['email']) ?>"
+                             data-bloedgroep="<?= htmlentities($user['blood_type']) ?>"
+                             data-notities="<?= htmlentities($user['notes']) ?>"
+                             data-wachtwoord="<?= htmlentities($user['password']) ?>"
+                             data-adres="<?= htmlentities($user['address']) ?>"
+                             data-postcode="<?= htmlentities($user['postal_code']) ?>">
 
-            <h3><?= htmlentities($user['name']) ?></h3>
+                            <h3><?= htmlentities($user['name']) ?></h3>
+                        </div>
+                    <?php endforeach; ?>
+                </section>
+
+                <div id="user-modal" class="user-info card" style="display: none;">
+                    <span class="close-btn">&times;</span>
+                    <ul class="user-details">
+                        <li><strong>Name:</strong> <span id="modal-name"></span></li>
+                        <li><strong>Age:</strong> <span id="modal-age"></span></li>
+                        <li><strong>Email:</strong> <span id="modal-email"></span></li>
+                        <li><strong>Password:</strong> <span id="modal-password"></span></li>
+                        <li><strong>Blood Type:</strong> <span id="modal-blood-type"></span></li>
+                        <li><strong>Address:</strong> <span id="modal-address"></span></li>
+                        <li><strong>Zipcode:</strong> <span id="modal-zipcode"></span></li>
+                        <li><strong>Notes:</strong> <span id="modal-notes"></span></li>
+                    </ul>
+                </div>
+
+            <?php elseif ($has_paid): ?>
+                <p class="no-users-message">Er zijn geen gebruikersgegevens beschikbaar.</p>
+            <?php endif; ?>
         </div>
-    <?php } ?>
-</section>
-
-<div id="user-modal" class="user-info card" style="display: none;">
-        <span class="close-btn">&times;</span>
-        <ul class="user-details">
-            <li><strong>Name:</strong> <span id="modal-name"></span></li>
-            <li><strong>Age:</strong> <span id="modal-age"></span></li>
-            <li><strong>Email:</strong> <span id="modal-email"></span></li>
-            <li><strong>Password:</strong> <span id="modal-password"></span></li>
-            <li><strong>Blood Type:</strong> <span id="modal-blood-type"></span></li>
-            <li><strong>Address:</strong> <span id="modal-address"></span></li>
-            <li><strong>Zipcode:</strong> <span id="modal-zipcode"></span></li>
-            <li><strong>Notes:</strong> <span id="modal-notes"></span></li>
-        </ul>
-</div>
-
-        <?php elseif ($has_paid): ?>
-            <p class="no-users-message">Er zijn geen gebruikersgegevens beschikbaar.</p>
-        <?php endif; ?>
     </div>
-</div>
-
 
     <footer>
         <p class="footerP">© 2074 CyberNoir</p>
@@ -120,7 +119,7 @@ if ($has_paid && $paywall_enabled) {
 
 <?php if (!$has_paid && $paywall_enabled): ?>
     <div class="paywall-overlay"></div>
-    <div class="paywall-popup">
+    <div class="paywall-popup" style="display: block;">
         <h2>Wanna buy users data, no problem!</h2>
         <p>To access this content, please make a "payment".</p>
         <form id="payment-form" method="POST">
@@ -128,7 +127,7 @@ if ($has_paid && $paywall_enabled) {
             <button class="buyButton" type="submit">Pay Now</button>
         </form>
         <?php if (!empty($error_message)): ?>
-            <p><?= $error_message ?></p>
+            <p><?= htmlentities($error_message) ?></p>
         <?php endif; ?>
     </div>
 <?php endif; ?>
