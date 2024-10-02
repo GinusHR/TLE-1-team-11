@@ -164,7 +164,7 @@ img {
     border: 3px solid #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     width: 6rem;
-    height: 3rem;
+    min-height: 6vh;
     color: white;
 }
 
@@ -233,31 +233,28 @@ footer {
 
 .loginWhole {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2vw;
-  
+    margin-right: 10vw;
 
 }
 
 .loginLabel {
     display: flex;
     flex-direction: column;
+    gap: 5vh;
+    align-items: end;
+
 }
 
 .loginInput {
     display: flex;
     flex-direction: column;
-  
+    gap: 5vh;
 }
 
-.spacingDiv {
-    margin-top: 13vh;
-    margin-bottom: 12vh;
-    padding-bottom: 1rem;
-
-}
 
 .inputField {
     display: flex;
@@ -265,19 +262,7 @@ footer {
     height: 15vh;
 }
 
-.loginWhole input,
-.loginWhole textarea {
-    height: 5vh;
-    width: 20vw;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-}
-
-.formWhole input,
-.formWhole textarea {
+input, textarea {
     padding-left: 1vw;
     margin-top: 1vh;
     height: 5vh;
@@ -288,22 +273,6 @@ footer {
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
 }
-
-.checkoutMain input,
-.checkoutmain textarea
-{
-    padding-left: 1vw;
-    margin-top: 1vh;
-    height: 5vh;
-    width: 20vw;
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #00CCFF;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-}
-
-
 
 .submitButtonHolder {
     margin-top: 6vh;
@@ -313,7 +282,7 @@ footer {
 }
 
 .submitButton {
-    font-size: 1.5rem;
+    font-size: 2rem;
     height: 8vh;
     width: 20vw;
     background-color: black;
@@ -348,35 +317,25 @@ footer {
 }
 
 .webcam {
-    border: 2px solid #00CCFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     overflow: hidden;
     background-color: black;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
-.webcam1:hover {
-    animation: glow 2s infinite ease-in-out;
-    box-shadow: 0 0 0 0 transparent;
-}
-
 
 .webcam2 {
     margin-left: 50vh;
     margin-right: 50vh;
     margin-top: 15vh;
-    border: 2px solid #00CCFF;
+    border: 1px solid #ddd;
     overflow: hidden;
     background-color: black;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding-left: 5vh;
     padding-right: 5vh;
-}
-
-.webcam2:hover {
-    animation: glow 2s infinite ease-in-out;
-    box-shadow: 0 0 0 0 transparent;
 }
 
 .webcam video {
@@ -645,14 +604,10 @@ video {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 20vw;
+    width: 30vh;
     color: white;
     text-align: center; 
-    background-color: black;
-    border-style: solid;
-    border-color: #00CCFF;
 }
-
 
 .product-name {
     font-size: 1.5rem;
@@ -793,12 +748,4 @@ video {
     color: red;
     display: flex;
     justify-content: center;
-}
-
-.signupError {
-    margin-top: 5px;
-    color: red;
-    display: flex;
-    justify-content: start;
-    font-size: small;
 }
