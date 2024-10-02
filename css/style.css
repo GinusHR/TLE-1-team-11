@@ -628,10 +628,14 @@ video {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 30vh;
+    width: 20vw;
     color: white;
     text-align: center; 
+    background-color: black;
+    border-style: solid;
+    border-color: #00CCFF;
 }
+
 
 .product-name {
     font-size: 1.5rem;

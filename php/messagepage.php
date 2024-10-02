@@ -29,7 +29,7 @@
         <h1 class="mainTitle">Bedankt voor uw aankoop!</h1>
         <p class="mainSubtitle">Uw bestelling is succesvol verwerkt. U kunt nu verder winkelen of inloggen om uw bestellingen te bekijken.</p>
         <a href="../index.php" class="mainButton">Terug naar de homepage</a>
-        <a href="../html/login.html" class="mainButton">Inloggen om bestellingen te bekijken</a>
+        <a href="../php/login.php" class="mainButton">Inloggen om bestellingen te bekijken</a>
     </section>
 </main>
 

@@ -319,7 +319,7 @@ mysqli_close($db);
         <p>To access this content, please make a "payment".</p>
         <form id="payment-form" method="POST">
             <input type="email" id="crypto-wallet" email="crypto_wallet" placeholder="Enter crypto wallet address" required>
-            <button class="buyButton" type="submit">Pay Now</button>
+            <button class="submitButton" type="submit">Pay Now</button>
         </form>
         <?php if (!empty($error_message)): ?>
             <p><?= $error_message ?></p>
