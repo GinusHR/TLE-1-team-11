@@ -129,7 +129,7 @@ mysqli_close($db);
 
 </script>
     <footer>
-        <p class="footerPVisible">© 2074 CyberNoir</p>
+        <p class="footerP">© 2074 CyberNoir</p>
     </footer>
 </body>
 </html>
