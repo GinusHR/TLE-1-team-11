@@ -45,16 +45,14 @@ if(isset($_POST['submit'])) {
         $zipcodeError = 'Enter your zipcode!';
     }
     if (empty($nameError) && empty($ageError) && empty($emailError) && empty($passwordError) && empty($bloodTypeError) && empty($addressError) && empty($zipcodeError)) {
-        // Check if email already exists
         $emailCheckQuery = "SELECT * FROM users2 WHERE email = '$email'";
         $emailCheckResult = mysqli_query($db, $emailCheckQuery);
 
         if (mysqli_num_rows($emailCheckResult) > 0) {
             $emailTaken = 'This email is already taken!';
         } else {
-            // Try-catch block for error handling
             try {
-                $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+                $hashPassword = md5($password);
                 $query = "INSERT INTO users2 (name, age, email, password, blood_type, address, postal_code, notes)
                           VALUES ('$name', '$age', '$email', '$hashPassword', '$bloodType', '$address', '$zipcode', '$notes')";
                 $result = mysqli_query($db, $query);
