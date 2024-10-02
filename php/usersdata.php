@@ -114,7 +114,7 @@ if ($has_paid && $paywall_enabled) {
 
 
     <footer>
-        <p class="footerP">© 2074 CyberNoir Webcams</p>
+        <p class="footerP">© 2074 CyberNoir</p>
     </footer>
 </div>
 
