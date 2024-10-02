@@ -126,8 +126,8 @@ header {
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     padding: 3rem;
     margin: 3rem;
-    min-height: 60vh;
-    max-height: 60vh;
+    min-height: 55vh;
+    max-height: 55vh;
 }
 
 .item img {
@@ -317,34 +317,25 @@ input, textarea {
 }
 
 .webcam {
-    border: 2px solid #00CCFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     overflow: hidden;
     background-color: black;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.webcam:hover{
-    animation: glow 2s infinite ease-in-out;
-    box-shadow: 0 0 0 0 transparent;
 }
 
 .webcam2 {
     margin-left: 50vh;
     margin-right: 50vh;
     margin-top: 15vh;
-    border: 2px solid #00CCFF;
+    border: 1px solid #ddd;
     overflow: hidden;
     background-color: black;
-    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding-left: 5vh;
     padding-right: 5vh;
-}
-
-.webcam2:hover {
-    animation: glow 2s infinite ease-in-out;
-    box-shadow: 0 0 0 0 transparent;
 }
 
 .webcam video {
@@ -757,11 +748,4 @@ video {
     color: red;
     display: flex;
     justify-content: center;
-}
-
-.signupError {
-    color: red;
-    display: flex;
-    justify-content: start;
-    margin-top: 5px;
 }
