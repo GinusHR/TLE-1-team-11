@@ -126,8 +126,8 @@ header {
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     padding: 3rem;
     margin: 3rem;
-    min-height: 60vh;
-    max-height: 6   0vh;
+    min-height: 55vh;
+    max-height: 55vh;
 }
 
 .item img {
@@ -231,6 +231,12 @@ footer {
     align-items: center;
 }
 
+.spacingDiv {
+    margin-top: 13vh;
+    padding: 2vh;
+    margin-bottom: 10vh;
+}
+
 .loginWhole {
     display: flex;
     flex-direction: row;
@@ -317,25 +323,34 @@ input, textarea {
 }
 
 .webcam {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid #00CCFF;
     overflow: hidden;
     background-color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     text-align: center;
+}
+
+.webcam:hover {
+    animation: glow 2s infinite ease-in-out;
+    box-shadow: 0 0 0 0 transparent;
 }
 
 .webcam2 {
     margin-left: 50vh;
     margin-right: 50vh;
     margin-top: 15vh;
-    border: 1px solid #ddd;
+    border: 2px solid #00CCFF;
     overflow: hidden;
     background-color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     text-align: center;
     padding-left: 5vh;
     padding-right: 5vh;
+}
+
+.webcam2:hover{
+    animation: glow 2s infinite ease-in-out;
+    box-shadow: 0 0 0 0 transparent;
 }
 
 .webcam video {
