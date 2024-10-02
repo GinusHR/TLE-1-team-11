@@ -126,8 +126,8 @@ header {
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     padding: 3rem;
     margin: 3rem;
-    min-height: 60vh;
-    max-height: 6   0vh;
+    min-height: 55vh;
+    max-height: 55vh;
 }
 
 .item img {
