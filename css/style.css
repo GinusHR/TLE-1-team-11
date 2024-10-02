@@ -231,6 +231,12 @@ footer {
     align-items: center;
 }
 
+.spacingDiv {
+    margin-top: 14vh;
+    margin-bottom: 11vh;
+    padding: 1vh;
+}
+
 .loginWhole {
     display: flex;
     flex-direction: column;
