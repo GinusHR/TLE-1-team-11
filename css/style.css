@@ -764,3 +764,12 @@ video {
     display: flex;
     justify-content: center;
 }
+
+.signupError {
+    color: red;
+    display: flex;
+    justify-content: start;
+    font-size: small;
+    margin-top: 4px;
+
+}
