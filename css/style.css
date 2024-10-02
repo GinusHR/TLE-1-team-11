@@ -321,7 +321,7 @@ footer {
     border-style: solid;
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-    padding: 2vh;
+    
 }
 
 .submitButton:hover {
@@ -648,13 +648,14 @@ video {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 41vh;
+    width: 20vw;
     background-color: black;
     border-style: solid;
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     text-align: center; 
     margin-bottom: 3vw;
+    color: white;
 }
 
 #payment-form2 {
@@ -669,13 +670,14 @@ video {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 41vh;
+    width: 20vw;
     background-color: black;
     border-style: solid;
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
     text-align: center; 
     margin-bottom: 3vw;
+    color: white;
 }
 
 
