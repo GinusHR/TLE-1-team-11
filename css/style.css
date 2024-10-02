@@ -315,7 +315,7 @@ footer {
     border-style: solid;
     border-color: #00CCFF;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.75);
-  
+    padding: 2vh;
 }
 
 .submitButton:hover {
@@ -819,3 +819,4 @@ video {
     margin-top: 4px;
 
 }
+
