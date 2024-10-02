@@ -44,20 +44,32 @@ if(isset($_POST['submit'])) {
     if ($_POST['zipcode'] === '') {
         $zipcodeError = 'Enter your zipcode!';
     }
+    if (empty($nameError) && empty($ageError) && empty($emailError) && empty($passwordError) && empty($bloodTypeError) && empty($addressError) && empty($zipcodeError)) {
+        // Check if email already exists
+        $emailCheckQuery = "SELECT * FROM users2 WHERE email = '$email'";
+        $emailCheckResult = mysqli_query($db, $emailCheckQuery);
 
+        if (mysqli_num_rows($emailCheckResult) > 0) {
+            $emailTaken = 'This email is already taken!';
+        } else {
+            // Try-catch block for error handling
+            try {
+                $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+                $query = "INSERT INTO users2 (name, age, email, password, blood_type, address, postal_code, notes)
+                          VALUES ('$name', '$age', '$email', '$hashPassword', '$bloodType', '$address', '$zipcode', '$notes')";
+                $result = mysqli_query($db, $query);
 
-    if (empty($nameError) && empty($ageError) && empty($emailError) && empty($passwordError) && empty($bloodTypeError) && empty($addressError) && empty($zipcodeError) ) {
-        $hashPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        $query = "INSERT INTO users2 (name, age, email, password, blood_type, address, postal_code, notes)
-                        VALUES  ('$name', '$age', '$email', '$hashPassword', '$bloodType', '$address', '$zipcode', '$notes' )  ";
-
-        $result = mysqli_query($db, $query) or die ('Error:' . mysqli_error($db));
-
-        header('Location: ../index.php');
-        exit;
+                if ($result) {
+                    header('Location: ../index.php');
+                    exit;
+                }
+            } catch (mysqli_sql_exception $e) {
+                $emailTaken = 'This email is already taken!';
+            }
+        }
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +115,11 @@ if(isset($_POST['submit'])) {
             <div class="inputField">
                 <label for="email">E-mail:</label>
                 <input placeholder="Insert E-mail" type="email" id="email" name="email"  required>
-
+                <?php if(isset($emailTaken)) { ?>
+                    <div class="signupError">
+                        <?=$emailTaken?>
+                    </div>
+                <?php } ?>
             </div>
 
             <div class="inputField">

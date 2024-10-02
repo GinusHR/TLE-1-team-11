@@ -99,6 +99,10 @@ if(!isset($_SESSION['user'])) {
             <p><a href="../php/logout.php">Log out</a> / <a href="../index.php">Time to make a purchase</a></p>
         </div>
 
+
+    <div class="spacingDiv">
+
+    </div>
 <?php } else { ?>
 <form action="../php/login.php" method="post">
     <div class="loginWhole">

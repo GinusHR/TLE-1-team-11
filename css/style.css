@@ -252,6 +252,13 @@ footer {
   
 }
 
+.spacingDiv {
+    margin-top: 13vh;
+    margin-bottom: 12vh;
+    padding-bottom: 1rem;
+
+}
+
 .inputField {
     display: flex;
     flex-direction: column;
@@ -772,4 +779,12 @@ video {
     color: red;
     display: flex;
     justify-content: center;
+}
+
+.signupError {
+    margin-top: 5px;
+    color: red;
+    display: flex;
+    justify-content: start;
+    font-size: small;
 }
